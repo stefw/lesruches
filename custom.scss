@@ -1,0 +1,101 @@
+/*-- scss:defaults --*/
+
+// Fonts
+$font-family-sans-serif: 'Roboto', sans-serif;
+$headings-font-family: 'Roboto', sans-serif;
+
+// Colors
+$primary: #0066cc;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+
+// Layout
+$grid-gutter-width: 2rem;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+// Cards
+$card-border-radius: 0.5rem;
+$card-border-width: 0;
+$card-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+// Navigation
+$navbar-padding-y: 1rem;
+$navbar-brand-font-size: 1.5rem;
+$navbar-dark-color: rgba(white, 0.9);
+$navbar-dark-hover-color: white;
+
+/*-- scss:rules --*/
+
+// Modern card styling
+.card {
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+// Enhanced navigation
+.navbar {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+// Improved typography
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+}
+
+// Better links
+a {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Modern lists
+ul, ol {
+  padding-left: 1.2rem;
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Table of contents
+#TOC {
+  border-left: 3px solid $primary;
+  padding-left: 1rem;
+}
+
+// Code blocks
+pre {
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+// Responsive images
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+// Print styles
+@media print {
+  body {
+    font-size: 12pt;
+  }
+  
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+}

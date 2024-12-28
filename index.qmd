@@ -1,0 +1,33 @@
+---
+title: "Comment fabriquer une guillotine"
+---
+
+## Introduction
+
+Le pouvoir saisi, un référendum sur les institutions sera tenu. Ce programme détaille les transformations nécessaires pour refonder notre République.
+
+## Structure du Programme
+
+### [Construire](pages/construire.qmd)
+Les fondements de la transformation : institutions, économie, et société.
+
+### Réformes par Domaine
+
+- [Institutions](pages/institutions.qmd) : Refonte du système politique et administratif
+- [Économie](pages/economie.qmd) : Transformation du système économique et financier
+- [Éducation](pages/education.qmd) : Refondation du système éducatif
+- [Social](pages/social.qmd) : Mesures pour la justice sociale
+- [Écologie](pages/ecologie.qmd) : Transition écologique et environnementale
+
+### [Mesures Immédiates](pages/mesures-immediates.qmd)
+Les actions à mettre en place dès la prise de pouvoir.
+
+## Navigation
+
+Utilisez la barre de navigation en haut pour accéder aux différentes sections du programme. Chaque section contient :
+
+- Un résumé des objectifs
+- Les mesures détaillées
+- Les modalités de mise en œuvre
+
+Le menu "Réformes" donne accès aux transformations sectorielles détaillées.

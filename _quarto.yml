@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Les Ruches"
+  navbar:
+    background: light
+    left:
+      - text: "Accueil"
+        href: index.qmd
+      - href: pages/construire.qmd
+        text: Construire
+      - text: "Réformes"
+        menu:
+          - text: "Institutions"
+            href: pages/institutions.qmd
+          - text: "Économie"
+            href: pages/economie.qmd
+          - text: "Éducation"
+            href: pages/education.qmd
+          - text: "Social"
+            href: pages/social.qmd
+          - text: "Écologie"
+            href: pages/ecologie.qmd
+      - href: pages/mesures-immediates.qmd
+        text: "Mesures Immédiates"
+
+  page-footer: |
+    "Les Ruches" : une synthèse de "Comment fabriquer une guillotine" de Juan Branco.
+    <br>
+    [Twitter](https://x.com/anatolium) | [PDF original](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf) | [Discord](https://discord.com/channels/1317888170628485200/1318638881956171857)
+    <br><br>
+    [GitHub](https://github.com/stefw/lesruches) | [Keybase](https://keybase.io/lesruches)
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-location: left
+    toc-title: "Sommaire"
+    number-sections: true
+    mainfont: "Linux Libertine"
+    page-layout: article

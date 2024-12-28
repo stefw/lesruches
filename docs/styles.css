@@ -1,0 +1,157 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Linux+Libertine:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Variables */
+:root {
+    --content-width: 1200px;
+    --link-color: #0645ad;
+    --link-hover: #0b0080;
+    --border-color: #a2a9b1;
+    --toc-background: #f8f9fa;
+    --sidebar-width: 250px;
+}
+
+/* Base */
+body {
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+    line-height: 1.6;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    background: white;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Layout */
+.page-columns {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) minmax(0, var(--content-width));
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: calc(var(--content-width) + var(--sidebar-width) + 1rem);
+}
+
+.content {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#quarto-margin-sidebar {
+    padding: 1rem;
+}
+
+#quarto-document-content {
+    padding: 1rem 2rem;
+    min-width: 0;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+    color: #000;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h1, h2 {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.2em;
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* TOC */
+#TOC {
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+    background: var(--toc-background);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.toc-active {
+    color: var(--link-hover);
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    margin: 1em 0;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 0.5em;
+}
+
+th {
+    background-color: var(--toc-background);
+}
+
+/* Code blocks */
+pre {
+    background-color: var(--toc-background);
+    border: 1px solid var(--border-color);
+    padding: 1em;
+    overflow-x: auto;
+}
+
+/* Navigation */
+.nav-link {
+    color: var(--link-color) !important;
+}
+
+.nav-link:hover {
+    color: var(--link-hover) !important;
+    text-decoration: underline;
+}
+
+/* Blockquotes */
+blockquote {
+    background-color: #F5F5F5;
+
+    margin: 1.5em 0;
+    padding: 1em 1.5em;
+    font-style: italic;
+    color: var(--link-color) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 0 4px 4px 0;
+}
+
+blockquote p {
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .page-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .content {
+        width: 95%;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 100%;
+        padding: 0 5px;
+    }
+}

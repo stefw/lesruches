@@ -1,0 +1,66 @@
+---
+title: "Programme"
+---
+
+# Programme détaillé
+
+:::{.content}
+
+## Samedi 13 Janvier
+
+### Matin
+- 10h00 : Ouverture des portes
+- 10h30 : Début des activités
+- 11h00 : Atelier principal
+- 12h30 : Pause déjeuner
+
+### Après-midi
+- 14h00 : Reprise des activités
+- 14h30 : Sessions parallèles
+- 16h00 : Pause
+- 16h30 : Session finale
+- 18h00 : Clôture de la journée
+
+## Dimanche 14 Janvier
+
+### Matin
+- 09h30 : Accueil
+- 10h00 : Session d'ouverture
+- 11h30 : Activités de groupe
+- 12h30 : Déjeuner
+
+### Après-midi
+- 14h00 : Ateliers thématiques
+- 15h30 : Pause
+- 16h00 : Session de clôture
+- 17h30 : Fin de l'événement
+
+## Détails des activités
+
+### Ateliers principaux
+1. **Atelier A** : Description détaillée
+   - Durée : 1h30
+   - Matériel nécessaire
+   - Objectifs
+
+2. **Atelier B** : Description détaillée
+   - Durée : 1h30
+   - Matériel nécessaire
+   - Objectifs
+
+### Sessions parallèles
+- **Session 1** : Thème et description
+- **Session 2** : Thème et description
+- **Session 3** : Thème et description
+
+## Informations pratiques
+
+### Pauses
+- Café et rafraîchissements disponibles
+- Zones de repos accessibles
+
+### Repas
+- Service de restauration sur place
+- Options végétariennes disponibles
+
+:::
