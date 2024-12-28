@@ -1,0 +1,22 @@
+/.quarto/
+# Python script
+extract_pdf.py
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environnement virtuel
+venv/
+env/
+.env/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers temporaires
+*.tmp
+*.bak
+*.swp
