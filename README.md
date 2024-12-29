@@ -1,6 +1,6 @@
 # Les Ruches
 
-Un site web construit avec Quarto présentant la synthèse de "Comment fabriquer une guillotine" de Juan Branco.
+Les Ruches est un site web construit avec Quarto présentant la synthèse de "Comment fabriquer une guillotine" de Juan Branco. Windsurf AI a été utilisé pour synthétiser les mesures programmatiques. Il peut y avoir des erreurs. Si vous en trouvez une, n’hesitez pas à ouvrir un ticket sur GitHub.
 
 ## Fonctionnalités
 
@@ -20,7 +20,7 @@ Un site web construit avec Quarto présentant la synthèse de "Comment fabriquer
 1. Clonez le dépôt :
 ```bash
 git clone https://github.com/stefw/lesruches.git
-cd branco
+cd lesruches
 ```
 
 2. Installez Quarto si ce n'est pas déjà fait :
