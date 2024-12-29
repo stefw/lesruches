@@ -1,5 +1,0 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^lesruch\.es$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www\.lesruch\.es$
-RewriteCond %{REQUEST_URI} !^/docs/
-RewriteRule ^(.*)$ /docs/$1 [L]
