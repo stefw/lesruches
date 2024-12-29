@@ -20,3 +20,6 @@ Thumbs.db
 *.tmp
 *.bak
 *.swp
+
+# Fichiers serveur web
+.htaccess
