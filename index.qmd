@@ -1,33 +1,31 @@
 ---
-title: "Comment fabriquer une guillotine"
+title: "Comment fabriquer une guillotine 🐝"
+version: 0.1.0
+date: last-modified
 ---
+
+<p class="version-info">Version {{< meta version >}} | Mise à jour : {{< meta date >}}</p>
 
 ## Introduction
 
 Le pouvoir saisi, un référendum sur les institutions sera tenu. Ce programme détaille les transformations nécessaires pour refonder notre République.
 
-## Structure du Programme
+# Programme
 
-### [Construire](pages/construire.qmd)
-Les fondements de la transformation : institutions, économie, et société.
+Ce site web est une adaptation numérique du programme politique "Comment fabriquer une guillotine", rendue possible grâce à l'utilisation des technologies d'intelligence artificielle (SONNET 3.5 et Windsurf AI) et d'un travail minutieux d'organisation et de structuration. Notre objectif a été de rendre ce texte programmatique accessible et navigable sur le web, tout en préservant scrupuleusement sa substance et son intention originelle.
 
-### Réformes par Domaine
+Chaque section a été méticuleusement organisée pour refléter avec la plus grande fidélité possible le contenu source. Les citations directes du texte original sont systématiquement référencées avec des liens vers les pages correspondantes du PDF source, permettant ainsi aux lecteurs de vérifier et de contextualiser chaque élément programmatique.
 
-- [Institutions](pages/institutions.qmd) : Refonte du système politique et administratif
-- [Économie](pages/economie.qmd) : Transformation du système économique et financier
-- [Éducation](pages/education.qmd) : Refondation du système éducatif
-- [Social](pages/social.qmd) : Mesures pour la justice sociale
-- [Écologie](pages/ecologie.qmd) : Transition écologique et environnementale
-
-### [Mesures Immédiates](pages/mesures-immediates.qmd)
-Les actions à mettre en place dès la prise de pouvoir.
+Cette adaptation numérique n'est ni une réécriture ni une interprétation, mais une restructuration fidèle visant à faciliter l'accès et la compréhension du programme original. Nous avons maintenu l'intégralité des propositions et leur articulation, en les organisant de manière thématique pour une navigation plus intuitive.
 
 ## Navigation
 
-Utilisez la barre de navigation en haut pour accéder aux différentes sections du programme. Chaque section contient :
+Le programme est organisé en sections thématiques :
 
-- Un résumé des objectifs
-- Les mesures détaillées
-- Les modalités de mise en œuvre
-
-Le menu "Réformes" donne accès aux transformations sectorielles détaillées.
+- [Économie](pages/economie.qmd) : Souveraineté économique et rupture avec l'oligarchisation
+- [Écologie](pages/ecologie.qmd) : Transformation écologique et protection de la biodiversité
+- [Social](pages/social.qmd) : Refondation sociale et protection universelle
+- [Éducation](pages/education.qmd) : Réforme du système éducatif et revalorisation des enseignants
+- [Institutions](pages/institutions.qmd) : Refonte constitutionnelle et démocratique
+- [Mesures Immédiates](pages/mesures-immediates.qmd) : Actions prioritaires et urgentes
+- [Construire](pages/construire.qmd) : Vision globale de la reconstruction nationale

@@ -2,42 +2,39 @@
 title: "Éducation"
 ---
 
-# Réforme de l'Éducation
+# Éducation
+
+La refondation du système éducatif s'appuiera sur une loi de programmation souveraine qui fera des fonctionnaires éducationnels les piliers de notre pays. L'enseignement sera transformé avec l'introduction du plurilinguisme dès le CP et la création d'un examen d'entrée national en sixième. L'accent sera mis sur la maîtrise des fondamentaux en histoire, langues et mathématiques. Cette réforme s'accompagnera d'une revalorisation majeure du statut des enseignants et d'une refonte complète des corps éducatifs, visant à restaurer leur fierté et leur autonomie professionnelle.
+
+## Réforme de l'Éducation
 
 ## Enseignement Supérieur
 
-### Universités
-> Les universités ne perdront pas leur vocation à assurer l'universel.
+### Universités et Recherche
+> "On ne « revalorisera » pas : on consacrera ces êtres qui se sont donnés au commun, leur rendant cette primauté symbolique et sociale qui n'aurait jamais dû leur être retirée."  
+> [Comment fabriquer une guillotine 🐝, p.8](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8){:target="_blank"}
 
-- Maintien de la vocation universelle
-- Démultiplication de l'universel
-- Abandon des logiques marchandes
-- Rejet de la concurrence
-- Renforcement de la tutelle étatique
-- Intégration de la formation continue
-- Déploiement international
-
-### Moyens et Recherche
-> Renforcement massif et direct des moyens octroyés à la recherche.
-
-- Augmentation substantielle des moyens
-- Réinauguration du rapport à la cité
-- Développement de la recherche publique
-- Rayonnement international
+- Consécration des enseignants-chercheurs comme piliers de la nation
+- Refondation des corps d'ingénierie et de recherche
+- Restitution de la primauté symbolique et sociale
+- Autonomisation de la recherche publique
+- Renforcement massif des moyens de recherche
 
 ## Formation Continue
 
 ### Accès Universel
-> Des formations continues au long terme permettant l'accès à toutes les professions – y compris les plus exigeantes – sans réquisit de diplôme préalable, sur le modèle des capacités en droit, seront développées et accessibles à tout stade de la vie.
+> "Quatre lois de programmation souveraine seront adoptées sur les questions de santé, d'énergie, d'enseignement et de numérique."  
+> [Comment fabriquer une guillotine 🐝, p.8](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8){:target="_blank"}
 
-- Formation à tout âge
-- Accès sans diplôme préalable
-- Toutes professions accessibles
-- Modèle des capacités en droit
-- Formation tout au long de la vie
+- Loi de programmation souveraine sur l'enseignement
+- Accès garanti aux ressources éducatives
+- Réponses concrètes aux besoins de formation
+- Liberté d'accès sans conditions préalables
+- Sécurisation des parcours de formation
 
 ### Principe d'Égalité
-> Nous nourrirons la France de ses rêves atrophiés : qui, mécanicien, souhaitait devenir médecin le pourra. À quelque âge que ce soit.
+> Nous nourrirons la France de ses rêves atrophiés : qui, mécanicien, souhaitait devenir médecin le pourra. À quelque âge que ce soit.  
+> [Comment fabriquer une guillotine 🐝, p.26](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=26){:target="_blank"}
 
 - Reconversion professionnelle totale
 - Égalité des chances réelle
@@ -54,15 +51,18 @@ title: "Éducation"
 ## Éducation Primaire et Secondaire
 
 ### Réforme Fondamentale
-> Refondation exigeante centrée sur les fondements linguistiques et calculants, seuls capables de nous faire renouer avec la promesse égalitaire d'une République.
+> "En amont, une politique éducative refondée sur l'acquisition des « fondamentaux » et un accroissement massif de la recherche permettront de renforcer des structures scientifiques en perdition."  
+> [Comment fabriquer une guillotine 🐝, p.6](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=6){:target="_blank"}
 
-- Maîtrise parfaite du calcul
-- Excellence linguistique
-- Promesse égalitaire républicaine
-- Fondements académiques solides
+- Refondation sur l'acquisition des fondamentaux
+- Renforcement des structures scientifiques
+- Accroissement massif de la recherche
+- Politique éducative restructurée
+- Revalorisation des savoirs fondamentaux
 
 ### Mesures Concrètes
-> Augmentation des salaires des professeurs du secondaire, création de manuels uniques édités par un pôle public, suppression de la distinction Capes/agrégation, renationalisation et reterminalisation du baccalauréat.
+> Augmentation des salaires des professeurs du secondaire, création de manuels uniques édités par un pôle public, suppression de la distinction Capes/agrégation, renationalisation et reterminalisation du baccalauréat.  
+> [Comment fabriquer une guillotine 🐝, p.27](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27){:target="_blank"}
 
 - Revalorisation salariale des enseignants
 - Manuels nationaux publics
@@ -71,16 +71,18 @@ title: "Éducation"
 - Reterminalisation des examens
 
 ### Innovation Pédagogique
-> Systématisation des classes bilingues dès la sixième, spécialisation renforcée dès la troisième en échange d'une possibilité d'accès à toute filière universitaire selon les niveaux.
+> "Généralisation du principe de l'enseignement plurilingue à partir du CP. Création d'un examen d'entrée national en sixième."  
+> [Comment fabriquer une guillotine 🐝, p.35](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=35){:target="_blank"}
 
-- Classes bilingues obligatoires (6ème)
-- Spécialisation précoce (3ème)
-- Accès universitaire selon niveau
-- Système de passerelles
-- Orientation flexible
+- Enseignement plurilingue obligatoire dès le CP
+- Examen d'entrée national en sixième
+- Refonte des modalités d'évaluation
+- Restructuration des cycles d'apprentissage
+- Renouvellement des méthodes pédagogiques
 
 ### Réforme Structurelle
-> Refonte de la politique éducative à destination des plus fragiles par le truchement d'une dualisation des systèmes éducatifs doublée de la création de passerelles systématiques.
+> Refonte de la politique éducative à destination des plus fragiles par le truchement d'une dualisation des systèmes éducatifs doublée de la création de passerelles systématiques.  
+> [Comment fabriquer une guillotine 🐝, p.27](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27){:target="_blank"}
 
 - Dualisation du système éducatif
 - Passerelles multiples
@@ -89,31 +91,37 @@ title: "Éducation"
 - Suppression des privilèges
 
 ### Nouveaux Corps Enseignants
-> Création d'un corps d'enseignants d'aide scolaire. Ouverture des institutions en dehors du temps scolaire.
+> "Elles feront à nouveau des fonctionnaires médicaux et éducationnels les piliers et la fierté de notre pays, aux côtés des corps d'ingénierie et de recherche, qui seront entièrement refondés."  
+> [Comment fabriquer une guillotine 🐝, p.8](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8){:target="_blank"}
 
-- Corps d'aide scolaire spécialisé
-- Ouverture hors temps scolaire
-- Soutien individualisé
-- Accompagnement renforcé
+- Refondation complète des corps enseignants
+- Rétablissement comme piliers de la nation
+- Revalorisation symbolique et matérielle
+- Autonomie pédagogique renforcée
+- Fierté nationale restaurée
 
 ### Direction et Administration
-- Refonte du système de remplacements
-- Nouvelle direction des établissements
-- Gestion administrative simplifiée
-- Autonomie encadrée
+- Refonte du système administratif éducatif
+- Simplification des procédures
+- Autonomie encadrée des établissements
+- Déconcentration des pouvoirs
+- Responsabilisation des acteurs
 
 ## Langue Française
 
 ### Promotion et Excellence
-> Le français redeviendra une langue universelle, et sera promu à cette fin. L'intensification des moyens investis dans le primaire, visant à exiger avant l'entrée en sixième une maîtrise parfaite du calcul et de l'écrit.
+> "Nous serons brillants car tel est l'esprit de ce pays, scientifique et cartésien, capable de produire de la pensée lorsque nous n'avions pas encore été colonisés."  
+> [Comment fabriquer une guillotine 🐝, p.6](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=6){:target="_blank"}
 
-- Promotion internationale du français
-- Excellence linguistique
-- Maîtrise parfaite avant la 6ème
-- Moyens renforcés au primaire
+- Rétablissement de l'esprit scientifique et cartésien
+- Production autonome de la pensée
+- Excellence académique restaurée
+- Décolonisation intellectuelle
+- Rayonnement international du français
 
 ### Réforme du Lycée
-> Le lycée redeviendra un lieu de formation à l'accès sélectif, garant d'une forme d'éducation spécifique, égalisée avec les autres voies d'accès au savoir, à la création et à la pensée.
+> Le lycée redeviendra un lieu de formation à l'accès sélectif, garant d'une forme d'éducation spécifique, égalisée avec les autres voies d'accès au savoir, à la création et à la pensée.  
+> [Comment fabriquer une guillotine 🐝, p.27](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27){:target="_blank"}
 
 - Sélectivité assumée
 - Excellence académique

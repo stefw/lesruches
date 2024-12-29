@@ -2,10 +2,15 @@
 title: "Écologie"
 ---
 
+# Écologie
+
+Face à la mort de la diversité miraculeuse de notre planète et à l'uniformisation du vivant, la France doit se constituer en havre environnemental. La transformation écologique passera par la construction d'un appareil productif autonome et la remise en cause de l'expansion économique effrénée. Un plan d'arrêt de l'artificialisation des sols, d'écoconception des produits et de réduction massive des déplacements sera mis en œuvre. L'autonomie énergétique sera une priorité absolue, accompagnée d'une reconfiguration radicale de l'appareil productif pour sortir de la dépendance aux grands marchés mondiaux. Une loi de programmation souveraine sur l'énergie garantira la sécurité et l'accès universel aux ressources naturelles.
+
 ## Mesures Immédiates
 
 ### Marchés Publics et Rénovation
-> Pondération écologique renforcée et systématique dans les marchés publics. Grand plan de rénovation thermique forcée à l'échelle du pays.
+> "Nous construirons un appareil productif guidé par l'appropriation, dans notre environnement immédiat, des principes scientifiques et industriels qui permettent aujourd'hui aux grandes puissances atlantiques et asiatiques de toucher la masse. Mais nous le ferons avec nos outils, et la conscience la plus intense que cette politique ne pourra s'appliquer en nos contrées sans remise en cause de la poursuite effrénée de l'expansion économique que nous connaissons."  
+> [Comment fabriquer une guillotine 🐝 ,  p.7](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7)
 
 - Critères écologiques obligatoires
 - Pondération renforcée
@@ -19,7 +24,8 @@ title: "Écologie"
 - Accompagnement social
 
 ### Transport et Énergie
-> Interdiction complète du diesel à cinq ans, de la voiture individuelle en ville à la même échelle, référendum sur l'énergie nucléaire à quinze ans.
+> "Plan d'arrêt et de reconversion des sols artificialisés, d'écoconception des produits de consommation, de réduction massive des déplacements notamment via de lourds aménagements de la voirie et un renforcement de l'usage des transports fluviaux, y compris via la création de canaux."  
+> [Comment fabriquer une guillotine 🐝 ,  p.38](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=38)
 
 - Interdiction du diesel (5 ans)
 - Fin des voitures en ville
@@ -33,7 +39,8 @@ title: "Écologie"
 - Débat démocratique
 
 ### Publicité et Traçabilité
-> Réduction de la publicité (généralisée), traçabilité de l'ensemble des productions agricoles et industrielles, y compris intermédiaires, à trois ans.
+> "La planète se meurt en ce qu'elle a de plus miraculeux : sa diversité charnelle et florale, animale et humaine est exploitée. Nous étouffons sous le règne de l'uniformité et la disparition du vivant dans sa diversité, et la France doit, en cette perspective, revendiquer son rapport à la différence, à l'altérité, et préparer sa survie en un monde où la radicalisation de notre biotope impose dès à présent que nous nous pensions en havre environnemental pour nos populations, sans nous transformer en citadelle assiégée."  
+> [Comment fabriquer une guillotine 🐝 ,  p.7](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7)
 
 - Réduction publicitaire générale
 - Traçabilité totale
@@ -49,7 +56,8 @@ title: "Écologie"
 ## Agriculture et Environnement
 
 ### Agriculture
-> Renforcement des obligations anticoncentrationnelles, déséquilibres de coûts de production avec les pays intra et hors UE, renforcement de l'arsenal législatif et réglementaire concernant les pesticides, instauration d'un minimum vital pour toute fonction agricole non industrielle.
+> "Oui, la France redeviendra une exception, éloignée des ambitions des compétitions-monde qui nous écrasent et nous désingularisent, reléguant nos énergies à la création de biens de consommation, et nous transformant nous-mêmes en objets à dévorer."  
+> [Comment fabriquer une guillotine 🐝 ,  p.7](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7)
 
 - Anticoncentration renforcée
 - Équilibrage des coûts UE
@@ -63,7 +71,8 @@ title: "Écologie"
 - Installation facilitée
 
 ### Plan Forêt
-> Plan forêt amenant à la réduction des coupes rases, au rétablissement de l'ONF et à la mise en œuvre d'une politique industrielle intégrée de la filière bois.
+> "Il nous faudra prioriser notre autonomie énergétique, avec laquelle nous ne transigerons pas, et réduire notre dépendance aux dispositifs d'accaparement des ressources qui nous feront en ces terres peuplées encore piller."  
+> [Comment fabriquer une guillotine 🐝 ,  p.8-9](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8)
 
 - Réduction coupes rases
 - Rétablissement ONF
@@ -79,7 +88,8 @@ title: "Écologie"
 ## Pêche et Ressources Marines
 
 ### Réforme de la Pêche
-> Loi sur la pêche permettant un renforcement de l'attractivité du secteur, des unités locales, la fin du chalutage en eaux profondes et la renégociation des quotas.
+> "La planète se meurt en ce qu'elle a de plus miraculeux : sa diversité charnelle et florale, animale et humaine est exploitée. Nous étouffons sous le règne de l'uniformité et la disparition du vivant dans sa diversité."  
+> [Comment fabriquer une guillotine 🐝 ,  p.7](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7)
 
 - Fin du chalutage profond
 - Attractivité du secteur
@@ -95,7 +105,8 @@ title: "Écologie"
 ## Industrie et Territoire
 
 ### Rééquilibrage Industriel
-> Rééquilibrage de l'ultraspécialisation industrielle par régions, création de pôles aux échelles intrarégionales sous la direction des commissaires du gouvernement.
+> "Nous construirons un appareil productif guidé par l'appropriation, dans notre environnement immédiat, des principes scientifiques et industriels qui permettent aujourd'hui aux grandes puissances atlantiques et asiatiques de toucher la masse. Mais nous le ferons avec nos outils, et la conscience la plus intense que cette politique ne pourra s'appliquer en nos contrées sans remise en cause de la poursuite effrénée de l'expansion économique que nous connaissons."  
+> [Comment fabriquer une guillotine 🐝 ,  p.7](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7)
 
 - Déspécialisation régionale
 - Pôles intrarégionaux
@@ -109,18 +120,76 @@ title: "Écologie"
 - Emplois durables
 
 ### Transformation Écologique
-> Préservation de notre souveraineté dans le cadre de la transformation écologique qui s'ensuivra.
 
-- Autonomie stratégique
-- Contrôle ressources
-- Indépendance énergétique
-- Protection biodiversité
-- Résilience systémique
-- Banques publiques vertes
-- Investissement écologique
-- Taxation carbone
-- Subventions vertes
-- Obligations climatiques
+#### Souveraineté Environnementale
+> "La planète se meurt en ce qu'elle a de plus miraculeux : sa diversité charnelle et florale, animale et humaine est exploitée. Nous étouffons sous le règne de l'uniformité et la disparition du vivant dans sa diversité, et la France doit, en cette perspective, revendiquer son rapport à la différence, à l'altérité, et préparer sa survie en un monde où la radicalisation de notre biotope impose dès à présent que nous nous pensions en havre environnemental pour nos populations, sans nous transformer en citadelle assiégée."  
+> [Comment fabriquer une guillotine 🐝 ,  p.7](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7)
+
+- Protection absolue de la diversité biologique
+- Lutte contre l'uniformisation du vivant
+- Création d'un havre environnemental national
+- Préservation des différences écologiques
+- Rapport équilibré à l'altérité naturelle
+
+#### Appareil Productif
+> "Nous construirons un appareil productif guidé par l'appropriation, dans notre environnement immédiat, des principes scientifiques et industriels qui permettent aujourd'hui aux grandes puissances atlantiques et asiatiques de toucher la masse. Mais nous le ferons avec nos outils, et la conscience la plus intense que cette politique ne pourra s'appliquer en nos contrées sans remise en cause de la poursuite effrénée de l'expansion économique que nous connaissons."  
+> [Comment fabriquer une guillotine 🐝 ,  p.7](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7)
+
+- Construction d'un appareil productif autonome
+- Appropriation locale des principes industriels
+- Remise en cause de l'expansion économique effrénée
+- Développement d'outils de production propres
+- Conscience écologique dans la production
+
+#### Transport et Mobilité
+> "Plan d'arrêt et de reconversion des sols artificialisés, d'écoconception des produits de consommation, de réduction massive des déplacements notamment via de lourds aménagements de la voirie et un renforcement de l'usage des transports fluviaux, y compris via la création de canaux."  
+> [Comment fabriquer une guillotine 🐝 ,  p.38](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=38)
+
+- Arrêt immédiat de l'artificialisation des sols
+- Reconversion des sols déjà artificialisés
+- Réduction massive des déplacements
+- Aménagements majeurs de la voirie
+- Création de nouveaux canaux fluviaux
+
+#### Consommation et Production
+> "Oui, la France redeviendra une exception, éloignée des ambitions des compétitions-monde qui nous écrasent et nous désingularisent, reléguant nos énergies à la création de biens de consommation, et nous transformant nous-mêmes en objets à dévorer."  
+> [Comment fabriquer une guillotine 🐝 ,  p.7](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7)
+
+- Sortie de la compétition-monde destructrice
+- Rejet de la société de surconsommation
+- Écoconception des produits
+- Préservation des singularités productives
+- Redéfinition du rapport aux biens
+
+#### Énergie et Ressources
+> "Il nous faudra prioriser notre autonomie énergétique, avec laquelle nous ne transigerons pas, et réduire notre dépendance aux dispositifs d'accaparement des ressources qui nous feront en ces terres peuplées encore piller."  
+> [Comment fabriquer une guillotine 🐝 ,  p.8-9](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8)
+
+- Priorité absolue à l'autonomie énergétique
+- Refus de toute compromission énergétique
+- Réduction des dépendances extérieures
+- Fin de l'accaparement des ressources
+- Arrêt du pillage des terres
+
+#### Aménagement du Territoire
+> "La reconstruction d'une indépendance économique passera par une brusque reconfiguration de notre appareil productif afin de ne plus dépendre de ces grands marchés que nous nous contentons aujourd'hui de piller – je pense à LVMH en Asie, Bolloré en Afrique, Vinci et tant d'autres structures moins visibles agissant dans le monde entier."  
+> [ Comment fabriquer une guillotine 🐝 , p.8 ](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8)
+
+- Reconfiguration radicale de l'appareil productif
+- Fin de la dépendance aux grands marchés
+- Relocalisation des activités économiques
+- Développement territorial équilibré
+- Autonomie productive locale
+
+#### Programmation Écologique
+> "Quatre lois de programmation souveraine seront adoptées sur les questions de santé, d'énergie, d'enseignement et de numérique, qui nous permettront d'offrir à nos concitoyens des réponses concrètes en termes de sécurité, intimité, accès aux ressources et liberté."  
+> [Comment fabriquer une guillotine 🐝 ,  p.8](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8)
+
+- Loi de programmation souveraine sur l'énergie
+- Garantie de sécurité énergétique
+- Protection de l'intimité environnementale
+- Accès universel aux ressources naturelles
+- Liberté des choix écologiques
 
 ## Objectifs de Transition
 - Pondération écologique dans les marchés

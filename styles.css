@@ -85,6 +85,23 @@ a:hover {
     color: var(--link-hover);
 }
 
+/* TOC styles */
+.sidebar-tools-main, .toc {
+    background-color: #000 !important;
+}
+
+.toc-content {
+    color: #ffc107 !important;
+}
+
+.toc a {
+    color: #ffc107 !important;
+}
+
+.toc a:hover {
+    color: #fff !important;
+}
+
 /* Tables */
 table {
     border-collapse: collapse;
@@ -121,20 +138,85 @@ pre {
 
 /* Blockquotes */
 blockquote {
-    background-color: #F5F5F5;
-
+    background-color: #000;
     margin: 1.5em 0;
-    padding: 1em 1.5em;
-    font-style: italic;
-    color: var(--link-color) !important;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-radius: 0 4px 4px 0;
+    padding:3em;
+    color: #ffc107 !important;
+    max-width: 85%;
 }
 
 blockquote p {
     margin: 0;
-    font-size: 1.1em;
+    font-size: 0.9em;
     line-height: 1.6;
+}
+
+blockquote a {
+    color: #FFF !important;
+    font-size: 0.7em;
+    padding-top: 2em;
+    float: right;
+}
+
+/* Links Section */
+.links-section {
+    margin-top: 1rem;
+    line-height: 2;
+}
+
+.links-section a {
+    color: #666;
+    text-decoration: none;
+}
+
+.links-section a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Info Section */
+.info-section {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.info-section p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.info-section hr {
+    margin: 0.5rem 0;
+    border-color: #ddd;
+}
+
+/* Version Info */
+.version-info {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: -1em;
+    margin-bottom: 2em;
+    font-style: italic;
+    font-family: 'Courier New', monospace;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: initial;
+}
+
+.sidebar-item-container {
+    color: initial;
+}
+
+.sidebar-item-container a {
+    color: initial;
+}
+
+.sidebar-item-container a:hover {
+    color: initial;
 }
 
 /* Responsive */

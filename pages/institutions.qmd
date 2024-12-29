@@ -1,19 +1,18 @@
 # Réforme des Institutions
 
+La refondation institutionnelle commencera par un référendum sur les institutions visant à mettre fin à la fonction d'incarnation totale du chef de l'État. La modification temporaire du mandat présidentiel s'accompagnera d'une fusion des chambres et de la transformation du Sénat en chambre du peuple. Des commissaires de la République élus remplaceront les préfets, tandis que des mandats impératifs et révocatoires seront instaurés. Un Tribunal révolutionnaire et un Comité de clémence seront créés pour purger la République. La réforme des décorations et honneurs intégrera l'abeille à l'emblème national, symbolisant un renouvellement majeur des dispositifs d'incarnation de l'État.
+
 ## Réformes Constitutionnelles Immédiates
 
 ### Structure du Pouvoir
-> Dans la perspective d'une scission des fonctions exécutives en autant de pôles de décision, mettant ainsi fin à la fonction d'incarnation totale et archaïque tenue par le chef de l'État...
+> "Le pouvoir saisi, un référendum sur les institutions sera tenu. Dans la perspective d'une scission des fonctions exécutives en autant de pôles de décision, mettant ainsi fin à la fonction d'incarnation totale et archaïque tenue par le chef de l'État, nous proposerons une modification temporaire de la durée du mandat présidentiel, une fusion des chambres, la suppression du Conseil économique, social et écologique, et la transformation du Sénat en une chambre du peuple."  
+> [ Comment fabriquer une guillotine 🐝 , p.23 ](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=23)
 
 - Scission des fonctions exécutives
 - Modification temporaire du mandat présidentiel
 - Fusion des chambres parlementaires
 - Suppression du Conseil économique, social et écologique
 - Transformation du Sénat en chambre du peuple validant les impulsions de l'Assemblée des communes
-
-### Symboles et Décorations
-> L'abeille, jaune et noire, intégrera l'emblème national, suite à une refonte totale du système de décorations et d'honneurs.
-
 - Intégration de l'abeille à l'emblème national
 - Refonte du système de décorations
 - Révision des attributions passées
@@ -23,7 +22,9 @@
 ## Haute Fonction Publique
 
 ### Réformes Immédiates
-> Les hauts fonctionnaires se verront interdire toute transition vers l'espace politique, et restreindre lourdement toute interaction avec l'appareil de production privé.
+> Les hauts fonctionnaires se verront interdire toute transition vers l'espace politique, et restreindre lourdement toute interaction avec l'appareil de production privé. [PDF, p.23](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=23)
+
+> Ouverture de la fonction publique aux docteurs : systématisation du principe de recrutement d'un docteur (qualifié) pour un haut fonctionnaire recruté via une autre voie. [PDF, p.27](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27)
 
 - Interdiction des transitions vers l'espace politique
 - Restriction des interactions avec le privé
@@ -32,32 +33,78 @@
 - Doublonnage hiérarchique (6 mois)
 
 ### Nouvelles Institutions
+> Cette réforme s'accompagnera de la création de commissaires de la République élus qui prendront la place des préfets, l'imposition de mandats impératifs et révocatoires, la possibilité permanente de référendums d'initiative citoyenne à choix multiples, convocables selon quatre modalités différentes et sanctionnables exclusivement par un veto présidentiel engageant immédiatement son mandat. [PDF, p.24](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=24)
+
 - Création du défenseur du peuple
 - Élection partielle des juges administratifs et judiciaires
 - Commissaires remplaçant les préfets
 - Création du procureur de la nation
 - Maisons du peuple comme assemblées
+- Référendums d'initiative citoyenne à choix multiples
+- Mandats impératifs et révocatoires
+- Veto présidentiel engageant le mandat
 
 ## Justice Révolutionnaire
 
 ### Tribunal et Clémence
-> L'institution d'un Tribunal révolutionnaire et d'un Comité de clémence visant à purger la République des affreux qui l'auront jadis pillée.
+> Institution d'un Tribunal révolutionnaire et d'un Comité de clémence visant à purger la République des affreux qui l'auront jadis pillée, ainsi que des responsables des violences les plus infâmes qui auront atteint à la population par le passé. [PDF, p.24](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=24)
+
+> Ces tribunaux seront de droit spécial, rétroactif, à compétence limitée aux faits passés et avec un pouvoir de sanction strictement limité à des peines courtes. Celles-ci seront sévères, mais non définitives : les condamnés seront ensuite reversés, selon leur choix, au système judiciaire commun ou à un Comité de clémence. [PDF, p.14](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=14)
 
 - Institution du Tribunal révolutionnaire
 - Création du Comité de clémence
+- Droit spécial et rétroactif
+- Peines courtes mais sévères
+- Choix de réversion
 - Purge des responsables des pillages
 - Jugement des violences contre la population
 
 ### Justice Ordinaire
+> La violence qui habite la société ne sera tolérée, et il sera mis fin aux peines d'apparat, notamment à la généralisation des sursis qui ne produisent rien, si ce n'est l'affaiblissement d'un stigmate précieux. [PDF, p.14](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=14)
+
 - Service public de la Défense intégré à la Sécurité sociale
 - Identité judiciaire unique centralisant les contentieux
 - Renforcement de la confidentialité préliminaire
 - Transparence post-procédure
 - Transfert de la DCPJ sous la tutelle du garde des Sceaux
 
+## Réformes des Forces de l'Ordre
+
+### Police et Maintien de l'Ordre
+
+#### Réorganisation Structurelle
+- Dissolution de la BRAV-M
+- Transfert de la DCPJ sous la tutelle du garde des Sceaux
+- Abandon des outils "intermédiaires" de maintien de l'ordre
+- Fin de l'utilisation d'unités non spécialisées
+
+#### Missions Spécifiques
+- Lutte contre les réseaux de corruption
+- Combat contre le clientélisme
+- Investigation des atteintes aux valeurs républicaines
+- Contrôle de l'intégrité des institutions
+
+#### Contrôle et Responsabilité
+- Commission d'enquête sur les violences politiques
+- Comité de poursuites sur les opérations de maintien de l'ordre
+- Renforcement de la transparence opérationnelle
+- Mécanismes de contrôle citoyen
+
+### Justice et Sécurité
+> "Service public de la Défense intégré à la Sécurité sociale, identité judiciaire unique centralisant les contentieux."  
+> [Comment fabriquer une guillotine 🐝 ,  p.26](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=26)
+
+#### Organisation Judiciaire
+- Service public de la Défense intégré à la Sécurité sociale
+- Identité judiciaire unique centralisant les contentieux
+- Renforcement de la confidentialité préliminaire
+- Transparence post-procédure
+
 ## Démocratie Directe
 
 ### Référendums
+> La possibilité permanente de référendums d'initiative citoyenne à choix multiples, convocables selon quatre modalités différentes et sanctionnables exclusivement par un veto présidentiel engageant immédiatement son mandat. [PDF, p.24](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=24)
+
 - Référendums d'initiative citoyenne à choix multiples
 - Quatre modalités de convocation différentes
 - Veto présidentiel engageant le mandat
@@ -65,6 +112,8 @@
 - Débat apartisan obligatoire
 
 ### Mandats et Contrôle
+> L'imposition de mandats impératifs et révocatoires. [PDF, p.24](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=24)
+
 - Mandats impératifs et révocatoires
 - Contrôle permanent des élus
 - Responsabilité directe devant le peuple
@@ -73,7 +122,7 @@
 ## Réforme Territoriale
 
 ### Principes Fondamentaux
-> Le millefeuille institutionnel qui s'est emparé de la France disparaîtra au profit des seuls dispositifs déconcentrés.
+> Le millefeuille institutionnel, proprement ridicule, qui s'est emparé de la France – avec son dessus – avec des échelons intermédiaires fruits d'une décentralisation bureaucratisée et dévitalisée –, disparaîtra pour le reste au profit des seuls dispositifs déconcentrés. [PDF, p.12](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=12)
 
 - Suppression des échelons intermédiaires bureaucratiques
 - Primauté de l'intérêt national
@@ -81,7 +130,7 @@
 - Dialogue des légitimités
 
 ### Organisation Communale
-> Il n'y aura à terme pas de compétence a priori que la commune n'ait pas.
+> Il n'y aura à terme pas de compétence a priori que la commune n'ait pas. La démocratie n'existe qu'au sein de la cité et de la nation : tout autre échelon la rend fictionnelle. [PDF, p.13](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=13)
 
 - Regroupements communaux respectant les intérêts locaux
 - Référendums d'initiative locale
@@ -91,7 +140,7 @@
 ## Régimes Spéciaux
 
 ### Territoires d'Exception
-> Fin des régimes d'exception du Luxembourg, de Monaco et d'Andorre. Destitution des archiducs et des familles princières.
+> Premier acte de la recentralisation (suppression des régions, transformées à titre transitoire en gouvernorats, révocables par les présidences de la République et les maisons du peuple). [PDF, p.24](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=24)
 
 - Fin des régimes de Monaco, Luxembourg et Andorre
 - Destitution des familles princières
@@ -101,7 +150,7 @@
 - Appropriation des réserves économiques
 
 ### Paris
-> Paris fera l'objet d'une large restructuration urbanistique pilotée par l'exécutif, doté des pleins pouvoirs en la matière.
+> Paris fera l'objet d'une large restructuration urbanistique pilotée par l'exécutif, doté des pleins pouvoirs en la matière. [PDF, p.25](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=25)
 
 - Restructuration urbanistique majeure
 - Pleins pouvoirs à l'exécutif
@@ -110,15 +159,15 @@
 
 ## Message aux Fonctionnaires
 
-> L'État appartient à la nation.
-> 
-> Certains d'entre vous considèrent que l'intérêt primordial qu'ils ont à défendre est celui de leur corps.
-> 
-> Qu'ils sachent qu'à présent celui du peuple primera.
+> L'État appartient à la nation. Certains d'entre vous considèrent que l'intérêt primordial qu'ils ont à défendre est celui de leur corps. Qu'ils sachent qu'à présent celui du peuple primera. Le moindre indice de déloyauté entraînera une sanction immédiate, quel que soit votre rang. [PDF, p.26](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=26)
 
 ### Réforme du Service Public
+> Les administrations redeviendront les maisons du peuple, avec une exigence d'autant plus accrue que le vivier de recrutement sera élargi, les fonctions les plus essentielles – telles que l'enseignement – retrouvant la valorisation qui leur revient par le truchement d'une remise à plat de leur mode d'organisation et de rémunération. [PDF, p.13](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=13)
+
 - Reconstitution des hiérarchies
-- Purge du corporatisme
-- Primauté de l'intérêt général
+- Purge du corps administratif
+- Valorisation des fonctions essentielles
+- Réorganisation complète
+- Nouvelles grilles de rémunération
 - Service au peuple
 - Gestion municipalisée

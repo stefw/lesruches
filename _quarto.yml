@@ -3,35 +3,47 @@ project:
   output-dir: docs
 
 website:
-  title: "Les Ruches"
+  title: "Les Ruches 🐝"
   navbar:
     background: light
     left:
       - text: "Accueil"
         href: index.qmd
-      - href: pages/construire.qmd
-        text: Construire
-      - text: "Réformes"
-        menu:
-          - text: "Institutions"
-            href: pages/institutions.qmd
-          - text: "Économie"
-            href: pages/economie.qmd
-          - text: "Éducation"
-            href: pages/education.qmd
-          - text: "Social"
-            href: pages/social.qmd
-          - text: "Écologie"
-            href: pages/ecologie.qmd
+      - text: "Construire"
+        href: pages/construire.qmd
       - href: pages/mesures-immediates.qmd
-        text: "Mesures Immédiates"
+        text: "Tout de suite"
+      - text: "Économie"
+        href: pages/economie.qmd
+      - text: "Écologie"
+        href: pages/ecologie.qmd
+      - text: "Social"
+        href: pages/social.qmd
+      - text: "Éducation"
+        href: pages/education.qmd
+      - text: "Institutions"
+        href: pages/institutions.qmd
 
-  page-footer: |
-    "Les Ruches" : une synthèse de "Comment fabriquer une guillotine" de Juan Branco.
-    <br>
-    [Twitter](https://x.com/anatolium) | [PDF original](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf) | [Discord](https://discord.com/channels/1317888170628485200/1318638881956171857)
-    <br><br>
-    [GitHub](https://github.com/stefw/lesruches) | [Keybase](https://keybase.io/lesruches)
+
+  page-navigation: true
+  sidebar:
+    - title: "Informations"
+      style: floating
+      alignment: right
+      contents:
+        - text: "Les Ruches : une synthèse de \"Comment fabriquer une guillotine\" de Juan Branco"
+        - text: "Liens"
+          contents:
+            - text: "Twitter"
+              href: https://x.com/anatolium
+            - text: "Discord"
+              href: https://discord.com/channels/1317888170628485200/1318638881956171857
+            - text: "Keybase"
+              href: https://keybase.io/lesruches
+            - text: "PDF original"
+              href: https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf
+            - text: "GitHub"
+              href: https://github.com/stefw/lesruches
 
 format:
   html:
@@ -42,4 +54,8 @@ format:
     toc-title: "Sommaire"
     number-sections: true
     mainfont: "Linux Libertine"
-    page-layout: article
+    page-layout: full
+    minimal: true
+    compress: true
+    lang: fr
+    date-format: "DD/MM/YYYY HH:mm"

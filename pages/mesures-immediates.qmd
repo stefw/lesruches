@@ -2,73 +2,89 @@
 title: "Mesures Immédiates"
 ---
 
-## Réformes Institutionnelles Immédiates
+# Mesures Immédiates
 
-### Exécutif et Administration
-- Transformation de Matignon en ministère de la Présidence
-- Rattachement du Budget au ministère de la Présidence
-- Création d'un poste de défenseur du peuple
-- Élection partielle des juges administratifs et judiciaires
-- Remplacement des préfets par des commissariats contrôlés par des maisons du peuple
-- Création d'un procureur de la nation
+## Exécutif et Administration
 
-### Haute Fonction Publique
-- Ouverture aux docteurs : recrutement systématique d'un docteur qualifié pour un haut fonctionnaire
-- Refondation des inspections générales sous la tutelle du défenseur du peuple
-- Doublonnage hiérarchique dans toutes les administrations
-- Interdiction de devenir élus sans démission préalable
-- Période de carence de cinq ans pour accéder à la haute fonction publique
+### Transformation de l'Exécutif
+> "Le pouvoir saisi, un référendum sur les institutions sera tenu. Dans la perspective d'une scission des fonctions exécutives en autant de pôles de décision, mettant ainsi fin à la fonction d'incarnation totale et archaïque tenue par le chef de l'État, nous proposerons une modification temporaire de la durée du mandat présidentiel, une fusion des chambres, la suppression du Conseil économique, social et écologique, et la transformation du Sénat en une chambre du peuple."  
+> [ Comment fabriquer une guillotine 🐝 , p.23 ](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=23)
 
-## Justice et Sécurité
+- Référendum sur les institutions
+- Scission des fonctions exécutives
+- Modification de la durée du mandat présidentiel
+- Fusion des chambres
+- Suppression du CESE
+- Transformation du Sénat
+
+### Défenseur du Peuple
+> "L'exécutif verra à Paris sa toute-puissance équilibrée par l'élection du défenseur du peuple, du gouverneur de la Banque de France et du procureur de la Nation, révocables et dès lors autorisés à revendiquer une légitimité populaire."  
+> [ Comment fabriquer une guillotine 🐝 , p.24 ](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=24)
+
+- Élection du défenseur du peuple
+- Élection du gouverneur de la Banque de France
+- Élection du procureur de la Nation
+- Révocabilité des élus
+- Légitimité populaire directe
+
+### Commissaires de la République
+> "Cette réforme s'accompagnera de la création de commissaires de la République élus qui prendront la place des préfets, l'imposition de mandats impératifs et révocatoires, la possibilité permanente de référendums d'initiative citoyenne à choix multiples."  
+> [ Comment fabriquer une guillotine 🐝 , p.24 ](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=24)
+
+- Création des commissaires de la République élus
+- Remplacement des préfets
+- Mandats impératifs et révocatoires
+- RIC à choix multiples permanent
+
+## Haute Fonction Publique
+
+### Renouvellement des Corps
+> "Le corps fonctionnarial administratif sera profondément renouvelé, ainsi que les modalités d'accès à son exercice, et tandis que la place centrale des corps médicaux, d'enseignement, de recherche et d'ingénierie sera réaffirmée, celle propre à l'organisation de la cité sera entièrement repensée."  
+> [ Comment fabriquer une guillotine 🐝 , p.23 ](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=23)
+
+- Renouvellement du corps fonctionnarial administratif
+- Nouvelles modalités d'accès
+- Réaffirmation des corps médicaux et d'enseignement
+- Refonte de l'organisation administrative
+
+### Ouverture aux Docteurs
+> "Ouverture de la fonction publique aux docteurs : systématisation du principe de recrutement d'un docteur (qualifié) pour un haut fonctionnaire recruté via une autre voie."  
+> [ Comment fabriquer une guillotine 🐝 , p.23 ](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=23)
+
+- Recrutement systématique de docteurs
+- Parité avec les autres voies de recrutement
+- Valorisation des qualifications doctorales
+
+### Période de Carence
+> "Une période de carence de cinq ans sera instaurée pour l'accès à la haute fonction publique après un passage dans le privé."  
+> [ Comment fabriquer une guillotine 🐝 , p.23 ](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=23)
+
+- Carence de 5 ans après le privé
+- Régulation des allers-retours public-privé
+
+### Refondation des Inspections
+> "Refondation des inspections générales, intégrées sous la tutelle du défenseur du peuple et séparées des grands corps d'État."  
+> [ Comment fabriquer une guillotine 🐝 , p.24 ](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=24)
+
+- Refonte des inspections générales
+- Tutelle du défenseur du peuple
+- Séparation des grands corps d'État
+
+### Transparence Administrative
+> "Numérisation des Archives nationales et systématisation de l'accessibilité aux documents publics."  
+> [ Comment fabriquer une guillotine 🐝 , p.24 ](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=24)
+
+- Numérisation des Archives nationales
+- Accès systématique aux documents publics
+- Transparence renforcée
+
+## Justice
 
 ### Réforme Judiciaire
-- Transfert de la DCPJ sous la tutelle du garde des Sceaux
-- Création d'un service public de la Défense intégré à la Sécurité sociale
-- Identité judiciaire unique centralisant les contentieux
-- Renforcement de la confidentialité des procédures préliminaires
+> "Service public de la Défense intégré à la Sécurité sociale, identité judiciaire unique centralisant les contentieux."  
+> [ Comment fabriquer une guillotine 🐝 , p.26 ](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=26)
 
-### Maintien de l'Ordre
-- Abandon des outils "intermédiaires"
-- Fin de l'utilisation d'unités non spécialisées
-- Commission d'enquête sur les violences politiques
-
-## Mesures Économiques et Sociales
-
-### Protection Sociale
-- Versement automatique des minima sociaux
-- Alignement des régimes de retraite
-- Création d'une caisse de sécurité professionnelle
-- Renforcement du contrôle des frais bancaires
-
-### Éducation
-- Augmentation des salaires des professeurs
-- Création de manuels uniques par un pôle public
-- Suppression de la distinction Capes/agrégation
-- Systématisation des classes bilingues dès la sixième
-
-## Mesures Écologiques
-
-### Transition Énergétique
-- Interdiction complète du diesel à cinq ans
-- Interdiction de la voiture individuelle en ville
-- Référendum sur l'énergie nucléaire à quinze ans
-- Grand plan de rénovation thermique
-
-### Agriculture et Environnement
-- Renforcement de l'arsenal législatif sur les pesticides
-- Plan forêt et rétablissement de l'ONF
-- Instauration d'un minimum vital pour l'agriculture non industrielle
-- Fin du chalutage en eaux profondes
-
-## Souveraineté Territoriale
-
-### Régimes d'Exception
-- Fin des régimes d'exception du Luxembourg, Monaco et Andorre
-- Destitution des archiducs et familles princières
-- Création de gouvernorats
-- Suspension des flux financiers et fermeture des frontières
-
-### Réorganisation Territoriale
-- Rééquilibrage de l'ultraspécialisation industrielle par régions
-- Création de pôles aux échelles intrarégionales
-- Direction par les commissaires du gouvernement
+- Service public de la Défense intégré
+- Identité judiciaire unique
+- Centralisation des contentieux
+- Intégration à la Sécurité sociale
