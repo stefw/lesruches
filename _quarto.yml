@@ -141,10 +141,3 @@ format:
               });
           });
           </script>
-    include-after-body:
-      - text: |
-          <footer class="footer">
-            <div class="footer-content">
-              <p>&copy; 2024 Aurores | <a href="https://aurores.org">aurores.org</a></p>
-            </div>
-          </footer>

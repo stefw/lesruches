@@ -1,9 +1,25 @@
-Ce site web est une adaptation numérique du programme politique "**Comment fabriquer une guillotine 🐝**", rendue possible grâce à l'utilisation des technologies d'intelligence artificielle (SONNET 3.5 et Windsurf AI) et d'un travail minutieux d'organisation et de structuration. Notre objectif a été de rendre ce texte programmatique accessible et navigable sur le web, tout en préservant scrupuleusement sa substance et son intention originelle.
+Ce site web est une adaptation numérique du programme politique "**Comment fabriquer une guillotine 🐝**", de Juan Branco. 
 
-Chaque section a été méticuleusement organisée pour refléter avec la plus grande fidélité possible le contenu source. Les citations directes du texte original sont systématiquement référencées avec des liens vers les pages correspondantes du PDF source, permettant ainsi aux lecteurs de vérifier et de contextualiser chaque élément programmatique.
+Il reprend le [pdf source](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf) mis à disposition par l'avocat.
 
-Cette adaptation numérique n'est ni une réécriture ni une interprétation, mais une restructuration fidèle visant à faciliter l'accès et la compréhension du programme original. Nous avons maintenu l'intégralité des propositions et leur articulation, en les organisant de manière thématique pour une navigation plus intuitive.
 
+> "Le pouvoir saisi, un référendum sur les institutions sera tenu. "  
+> [ Comment fabriquer une guillotine 🐝 , p.2 ](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=2)
+
+
+
+En cette fin d'année, j'ai voulu me faire plaisir et utiliser [Quarto](https://quarto.org) pour rendre ce texte programmatique accessible et navigable sur le web, en utilisant un peu d'IA pour m'aider : Sonnet 3.5 & Windsurf AI.
+
+Chaque section a été organisée pour refléter avec la plus grande fidélité possible le contenu source. Il manque bon nombre de contenus et de propositions. Le but n'est pas de reproduire le texte original, mais de le rendre accessible et navigable.
+
+Les citations directes du texte original sont systématiquement référencées avec des liens vers les pages correspondantes du [pdf source](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf), permettant ainsi aux lecteurs de vérifier et de contextualiser chaque élément programmatique.
+
+Cette adaptation numérique n'est ni une réécriture ni une interprétation, mais une restructuration, j'espère fidèle, visant à faciliter l'accès et la compréhension du programme original. 
+
+
+--- 
+
+Voici le menu :
 
 - [Construire](pages/construire.qmd) : Vision globale de la reconstruction nationale
 - [Économie](pages/economie.qmd) : Souveraineté économique et rupture avec l'oligarchisation
@@ -12,3 +28,24 @@ Cette adaptation numérique n'est ni une réécriture ni une interprétation, ma
 - [Éducation](pages/education.qmd) : Réforme du système éducatif et revalorisation des enseignants
 - [Institutions](pages/institutions.qmd) : Refonte constitutionnelle et démocratique
 
+
+--- 
+
+
+Pour contacter Juan Branco, rendez-vous sur [X](https://x.com/anatolium), il n'est toujours pas sur BS, ni sur Mastodon, il préfère sans doute les abeilles aux éléphants a priori !! :^^ Voici aussi le [Discord](https://discord.com/channels/1317888170628485200/1320775895472017462) . 
+
+Ce site est sous licence [MIT](https://github.com/stefw/lesruches/blob/main/LICENSE), faites en ce que vous voulez, ainsi que du thème Quarto, que je trouve plutot sympatoche.
+
+Le code source est sur [Github](https://github.com/stefw/lesruches). 
+
+Il est susceptible d'avoir quelques petits bugs, n'hesitez pas a ouvrir un [ticket](https://github.com/stefw/lesruches/issues) sur Github ou a envoyer un message sur [keybase](https://keybase.io/lesruches), pour toute remarque, de forme ou de fond.
+
+Je ne suis pas une abeille, ni affilié à Juan Branco. 
+Si quelqu'un de l'organisation veut récupérer ce domaine, ou veut ajouter des contenus ici, [contactez-moi](https://keybase.io/lesruches)
+
+D'ailleurs, je cherche toujouts la reine.
+
+
+
+
+Maya ?
