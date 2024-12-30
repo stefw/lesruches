@@ -41,11 +41,16 @@ Le code source est sur [Github](https://github.com/stefw/lesruches).
 Il est susceptible d'avoir quelques petits bugs, n'hesitez pas a ouvrir un [ticket](https://github.com/stefw/lesruches/issues) sur Github ou a envoyer un message sur [keybase](https://keybase.io/lesruches), pour toute remarque, de forme ou de fond.
 
 Je ne suis pas une abeille, ni affilié à Juan Branco. 
-Si quelqu'un de l'organisation veut récupérer ce domaine, ou veut ajouter des contenus ici, [contactez-moi](https://keybase.io/lesruches)
+Si quelqu'un de l'organisation veut récupérer ce domaine, ou veut ajouter des contenus ici, on n'est pas à l'usine, mais pourquoi pas,  [contactez-moi](https://keybase.io/lesruches)
 
-D'ailleurs, je cherche toujouts la reine.
-
-
-
-
+D'ailleurs, je cherche toujours la Reine.
 Maya ?
+
+Je ferai évoluer le site dès que j'ai un peu de temps pour le compléter.
+Il n'est pas optimal en mobile, etc... etc...
+
+100% sans cookies, et sans tracking.
+
+> "Le pouvoir saisi, un réfendement sur les institutions sera tenu. "  
+> [ Comment fabriquer une guillotine 🐝 , p.2 ](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=2)
+
