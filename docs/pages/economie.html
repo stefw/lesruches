@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>economie – Les Ruches 🐝</title>
+<title>Économie – Les Ruches</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -62,6 +62,83 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Recherche"
   }
 }</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const quotes = document.querySelectorAll('blockquote');
+    
+    quotes.forEach((quote, index) => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'quote-wrapper';
+        quote.parentNode.insertBefore(wrapper, quote);
+        wrapper.appendChild(quote);
+        
+        const shareButtons = document.createElement('div');
+        shareButtons.className = 'share-buttons';
+        shareButtons.style.display = 'none';
+        
+        const quoteText = quote.textContent.trim();
+        const pdfLink = 'https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf';
+        
+        const buttons = [
+            ['twitter', 'bi-twitter-x', `https://twitter.com/intent/tweet?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['bluesky', 'bi-cloud', `https://bsky.app/intent/compose?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['linkedin', 'bi-linkedin', `https://www.linkedin.com/sharing/share-offsite/?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['facebook', 'bi-facebook', `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pdfLink)}`],
+        ];
+        
+        buttons.forEach(([platform, icon, url]) => {
+            const link = document.createElement('a');
+            link.href = url;
+            link.className = `share-button ${platform}`;
+            link.target = '_blank';
+            link.rel = 'noopener';
+            
+            const iconElement = document.createElement('i');
+            iconElement.className = `bi ${icon}`;
+            link.appendChild(iconElement);
+            
+            shareButtons.appendChild(link);
+        });
+        
+        // Ajout du bouton Mastodon avec dialogue
+        const mastodonButton = document.createElement('a');
+        mastodonButton.href = '#';
+        mastodonButton.className = 'share-button mastodon';
+        mastodonButton.onclick = (e) => {
+            e.preventDefault();
+            const instance = prompt('Entrez votre instance Mastodon (ex: mastodon.social):', 'mastodon.social');
+            if (instance) {
+                const mastodonUrl = `https://${instance}/share?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`;
+                window.open(mastodonUrl, '_blank');
+            }
+        };
+        
+        const mastodonIcon = document.createElement('i');
+        mastodonIcon.className = 'bi bi-mastodon';
+        mastodonButton.appendChild(mastodonIcon);
+        shareButtons.appendChild(mastodonButton);
+        
+        wrapper.appendChild(shareButtons);
+        
+        wrapper.addEventListener('mouseenter', () => {
+            shareButtons.style.display = 'flex';
+        });
+        
+        wrapper.addEventListener('mouseleave', (e) => {
+            if (!e.relatedTarget || !e.relatedTarget.closest('.share-buttons')) {
+                shareButtons.style.display = 'none';
+            }
+        });
+        
+        shareButtons.addEventListener('mouseleave', () => {
+            if (!wrapper.matches(':hover')) {
+                shareButtons.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -75,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Les Ruches 🐝</span>
+    <span class="navbar-title">Les Ruches</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Recherche"></div>
@@ -89,12 +166,16 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../#"> 
+<span class="menu-text">|</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../pages/construire.html"> 
 <span class="menu-text">Construire</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pages/mesures-immediates.html"> 
-<span class="menu-text">Tout de suite</span></a>
+    <a class="nav-link" href="../#"> 
+<span class="menu-text">|</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../pages/economie.html" aria-current="page"> 
@@ -105,16 +186,16 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Écologie</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pages/social.html"> 
-<span class="menu-text">Social</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../pages/education.html"> 
 <span class="menu-text">Éducation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../pages/institutions.html"> 
 <span class="menu-text">Institutions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../pages/social.html"> 
+<span class="menu-text">Social</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -131,43 +212,40 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sommaire</h2>
    
   <ul>
-  <li><a href="#économie" id="toc-économie" class="nav-link active" data-scroll-target="#économie"><span class="header-section-number">1</span> Économie</a>
+  <li><a href="#souveraineté-économique" id="toc-souveraineté-économique" class="nav-link active" data-scroll-target="#souveraineté-économique">Souveraineté Économique</a>
   <ul class="collapse">
-  <li><a href="#souveraineté-économique" id="toc-souveraineté-économique" class="nav-link" data-scroll-target="#souveraineté-économique"><span class="header-section-number">1.1</span> Souveraineté Économique</a>
-  <ul class="collapse">
-  <li><a href="#politique-monétaire" id="toc-politique-monétaire" class="nav-link" data-scroll-target="#politique-monétaire"><span class="header-section-number">1.1.1</span> Politique Monétaire</a></li>
-  <li><a href="#contrôle-des-changes" id="toc-contrôle-des-changes" class="nav-link" data-scroll-target="#contrôle-des-changes"><span class="header-section-number">1.1.2</span> Contrôle des Changes</a></li>
-  <li><a href="#rééquilibrage-économique" id="toc-rééquilibrage-économique" class="nav-link" data-scroll-target="#rééquilibrage-économique"><span class="header-section-number">1.1.3</span> Rééquilibrage Économique</a></li>
+  <li><a href="#politique-monétaire" id="toc-politique-monétaire" class="nav-link" data-scroll-target="#politique-monétaire">Politique Monétaire</a></li>
+  <li><a href="#contrôle-des-changes" id="toc-contrôle-des-changes" class="nav-link" data-scroll-target="#contrôle-des-changes">Contrôle des Changes</a></li>
+  <li><a href="#rééquilibrage-économique" id="toc-rééquilibrage-économique" class="nav-link" data-scroll-target="#rééquilibrage-économique">Rééquilibrage Économique</a></li>
   </ul></li>
-  <li><a href="#système-bancaire" id="toc-système-bancaire" class="nav-link" data-scroll-target="#système-bancaire"><span class="header-section-number">1.2</span> Système Bancaire</a>
+  <li><a href="#système-bancaire" id="toc-système-bancaire" class="nav-link" data-scroll-target="#système-bancaire">Système Bancaire</a>
   <ul class="collapse">
-  <li><a href="#banque-de-france" id="toc-banque-de-france" class="nav-link" data-scroll-target="#banque-de-france"><span class="header-section-number">1.2.1</span> Banque de France</a></li>
-  <li><a href="#établissements-bancaires-publics" id="toc-établissements-bancaires-publics" class="nav-link" data-scroll-target="#établissements-bancaires-publics"><span class="header-section-number">1.2.2</span> Établissements Bancaires Publics</a></li>
+  <li><a href="#banque-de-france" id="toc-banque-de-france" class="nav-link" data-scroll-target="#banque-de-france">Banque de France</a></li>
+  <li><a href="#établissements-bancaires-publics" id="toc-établissements-bancaires-publics" class="nav-link" data-scroll-target="#établissements-bancaires-publics">Établissements Bancaires Publics</a></li>
   </ul></li>
-  <li><a href="#démantèlement-des-oligopoles" id="toc-démantèlement-des-oligopoles" class="nav-link" data-scroll-target="#démantèlement-des-oligopoles"><span class="header-section-number">1.3</span> Démantèlement des Oligopoles</a>
+  <li><a href="#démantèlement-des-oligopoles" id="toc-démantèlement-des-oligopoles" class="nav-link" data-scroll-target="#démantèlement-des-oligopoles">Démantèlement des Oligopoles</a>
   <ul class="collapse">
-  <li><a href="#réforme-structurelle" id="toc-réforme-structurelle" class="nav-link" data-scroll-target="#réforme-structurelle"><span class="header-section-number">1.3.1</span> Réforme Structurelle</a></li>
-  <li><a href="#commande-publique" id="toc-commande-publique" class="nav-link" data-scroll-target="#commande-publique"><span class="header-section-number">1.3.2</span> Commande Publique</a></li>
-  <li><a href="#médias-et-communication" id="toc-médias-et-communication" class="nav-link" data-scroll-target="#médias-et-communication"><span class="header-section-number">1.3.3</span> Médias et Communication</a></li>
-  <li><a href="#infrastructure-numérique" id="toc-infrastructure-numérique" class="nav-link" data-scroll-target="#infrastructure-numérique"><span class="header-section-number">1.3.4</span> Infrastructure Numérique</a></li>
-  <li><a href="#paradis-fiscaux" id="toc-paradis-fiscaux" class="nav-link" data-scroll-target="#paradis-fiscaux"><span class="header-section-number">1.3.5</span> Paradis Fiscaux</a></li>
+  <li><a href="#réforme-structurelle" id="toc-réforme-structurelle" class="nav-link" data-scroll-target="#réforme-structurelle">Réforme Structurelle</a></li>
+  <li><a href="#commande-publique" id="toc-commande-publique" class="nav-link" data-scroll-target="#commande-publique">Commande Publique</a></li>
+  <li><a href="#médias-et-communication" id="toc-médias-et-communication" class="nav-link" data-scroll-target="#médias-et-communication">Médias et Communication</a></li>
+  <li><a href="#infrastructure-numérique" id="toc-infrastructure-numérique" class="nav-link" data-scroll-target="#infrastructure-numérique">Infrastructure Numérique</a></li>
+  <li><a href="#paradis-fiscaux" id="toc-paradis-fiscaux" class="nav-link" data-scroll-target="#paradis-fiscaux">Paradis Fiscaux</a></li>
   </ul></li>
-  <li><a href="#protection-sociale" id="toc-protection-sociale" class="nav-link" data-scroll-target="#protection-sociale"><span class="header-section-number">1.4</span> Protection Sociale</a>
+  <li><a href="#protection-sociale" id="toc-protection-sociale" class="nav-link" data-scroll-target="#protection-sociale">Protection Sociale</a>
   <ul class="collapse">
-  <li><a href="#réformes-structurelles" id="toc-réformes-structurelles" class="nav-link" data-scroll-target="#réformes-structurelles"><span class="header-section-number">1.4.1</span> Réformes Structurelles</a></li>
-  <li><a href="#lutte-contre-la-précarité" id="toc-lutte-contre-la-précarité" class="nav-link" data-scroll-target="#lutte-contre-la-précarité"><span class="header-section-number">1.4.2</span> Lutte contre la Précarité</a></li>
+  <li><a href="#réformes-structurelles" id="toc-réformes-structurelles" class="nav-link" data-scroll-target="#réformes-structurelles">Réformes Structurelles</a></li>
+  <li><a href="#lutte-contre-la-précarité" id="toc-lutte-contre-la-précarité" class="nav-link" data-scroll-target="#lutte-contre-la-précarité">Lutte contre la Précarité</a></li>
   </ul></li>
-  <li><a href="#secteurs-stratégiques" id="toc-secteurs-stratégiques" class="nav-link" data-scroll-target="#secteurs-stratégiques"><span class="header-section-number">1.5</span> Secteurs Stratégiques</a>
+  <li><a href="#secteurs-stratégiques" id="toc-secteurs-stratégiques" class="nav-link" data-scroll-target="#secteurs-stratégiques">Secteurs Stratégiques</a>
   <ul class="collapse">
-  <li><a href="#agriculture" id="toc-agriculture" class="nav-link" data-scroll-target="#agriculture"><span class="header-section-number">1.5.1</span> Agriculture</a></li>
-  <li><a href="#pêche" id="toc-pêche" class="nav-link" data-scroll-target="#pêche"><span class="header-section-number">1.5.2</span> Pêche</a></li>
-  <li><a href="#industrie" id="toc-industrie" class="nav-link" data-scroll-target="#industrie"><span class="header-section-number">1.5.3</span> Industrie</a></li>
+  <li><a href="#agriculture" id="toc-agriculture" class="nav-link" data-scroll-target="#agriculture">Agriculture</a></li>
+  <li><a href="#pêche" id="toc-pêche" class="nav-link" data-scroll-target="#pêche">Pêche</a></li>
+  <li><a href="#industrie" id="toc-industrie" class="nav-link" data-scroll-target="#industrie">Industrie</a></li>
   </ul></li>
-  <li><a href="#médias-et-communication-1" id="toc-médias-et-communication-1" class="nav-link" data-scroll-target="#médias-et-communication-1"><span class="header-section-number">1.6</span> Médias et Communication</a>
+  <li><a href="#médias-et-communication-1" id="toc-médias-et-communication-1" class="nav-link" data-scroll-target="#médias-et-communication-1">Médias et Communication</a>
   <ul class="collapse">
-  <li><a href="#indépendance" id="toc-indépendance" class="nav-link" data-scroll-target="#indépendance"><span class="header-section-number">1.6.1</span> Indépendance</a></li>
-  <li><a href="#audiovisuel" id="toc-audiovisuel" class="nav-link" data-scroll-target="#audiovisuel"><span class="header-section-number">1.6.2</span> Audiovisuel</a></li>
-  </ul></li>
+  <li><a href="#indépendance" id="toc-indépendance" class="nav-link" data-scroll-target="#indépendance">Indépendance</a></li>
+  <li><a href="#audiovisuel" id="toc-audiovisuel" class="nav-link" data-scroll-target="#audiovisuel">Audiovisuel</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -177,18 +255,36 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page-right" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Économie</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-page-right">
 
-<section id="économie" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Économie</h1>
-<p>La refondation économique s’articule autour d’une rupture avec l’oligarchisation rampante de la société et d’une reconquête de la souveraineté monétaire et productive. Un référendum sur l’appartenance à l’Union européenne sera organisé dans les 24 mois, précédé de mesures conservatoires pour une possible transition vers une monnaie souveraine. La création d’établissements bancaires publics spécialisés et le contrôle des changes permettront d’assainir la production monétaire. Le démantèlement des oligopoles et la nationalisation des entreprises liées à la commande publique s’accompagneront d’une rétrocession des médias aux citoyens via des fondations autogérées. Un réseau numérique unique et souverain sera établi, tandis que les points de fuite fiscaux aux frontières seront neutralisés.</p>
-<section id="souveraineté-économique" class="level2" data-number="1.1">
-<h2 data-number="1.1" data-anchor-id="souveraineté-économique"><span class="header-section-number">1.1</span> Souveraineté Économique</h2>
-<section id="politique-monétaire" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" data-anchor-id="politique-monétaire"><span class="header-section-number">1.1.1</span> Politique Monétaire</h3>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>La refondation économique s’articule autour d’une rupture avec l’oligarchisation rampante de la société et d’une reconquête de la souveraineté monétaire et productive.</p>
+<p>Un référendum sur l’appartenance à l’Union européenne sera organisé dans les 24 mois, précédé de mesures conservatoires pour une possible transition vers une monnaie souveraine.</p>
+<p>La création d’établissements bancaires publics spécialisés et le contrôle des changes permettront d’assainir la production monétaire.</p>
+<p>Le démantèlement des oligopoles et la nationalisation des entreprises liées à la commande publique s’accompagneront d’une rétrocession des médias aux citoyens via des fondations autogérées.</p>
+<p>Un réseau numérique unique et souverain sera établi, tandis que les points de fuite fiscaux aux frontières seront neutralisés.</p>
+<section id="souveraineté-économique" class="level2">
+<h2 data-anchor-id="souveraineté-économique">Souveraineté Économique</h2>
+<section id="politique-monétaire" class="level3">
+<h3 data-anchor-id="politique-monétaire">Politique Monétaire</h3>
 <blockquote class="blockquote">
 <p>“Un référendum sur l’appartenance à l’Union européenne sera proposé, après que des mesures conservatoires auront été prises afin de préparer l’hypothèse d’une transition vers une monnaie souveraine et qu’un temps de débat apartisan, dans lequel les représentants en fonction n’adopteront aucune position, ait été imposé.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=3">Comment fabriquer une guillotine 🐝 , p.3</a></p>
@@ -201,8 +297,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Préparation de la transition monétaire</li>
 </ul>
 </section>
-<section id="contrôle-des-changes" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" data-anchor-id="contrôle-des-changes"><span class="header-section-number">1.1.2</span> Contrôle des Changes</h3>
+<section id="contrôle-des-changes" class="level3">
+<h3 data-anchor-id="contrôle-des-changes">Contrôle des Changes</h3>
 <blockquote class="blockquote">
 <p>“ainsi que la possibilité d’un contrôle des changes et des capitaux afin de préserver notre souveraineté dans le cadre de la transformation écologique qui s’ensuivra.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=3">Comment fabriquer une guillotine 🐝 , p.3</a></p>
@@ -215,8 +311,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Protection contre la spéculation</li>
 </ul>
 </section>
-<section id="rééquilibrage-économique" class="level3" data-number="1.1.3">
-<h3 data-number="1.1.3" data-anchor-id="rééquilibrage-économique"><span class="header-section-number">1.1.3</span> Rééquilibrage Économique</h3>
+<section id="rééquilibrage-économique" class="level3">
+<h3 data-anchor-id="rééquilibrage-économique">Rééquilibrage Économique</h3>
 <blockquote class="blockquote">
 <p>“Les objectifs d’inflation, revus à la hausse, permettront un rééquilibrage progressif de la structure inégalitaire de la société française et un avortement des bulles spéculatives, notamment dans l’immobilier.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=3">Comment fabriquer une guillotine 🐝 , p.3</a></p>
@@ -230,10 +326,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="système-bancaire" class="level2" data-number="1.2">
-<h2 data-number="1.2" data-anchor-id="système-bancaire"><span class="header-section-number">1.2</span> Système Bancaire</h2>
-<section id="banque-de-france" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" data-anchor-id="banque-de-france"><span class="header-section-number">1.2.1</span> Banque de France</h3>
+<section id="système-bancaire" class="level2">
+<h2 data-anchor-id="système-bancaire">Système Bancaire</h2>
+<section id="banque-de-france" class="level3">
+<h3 data-anchor-id="banque-de-france">Banque de France</h3>
 <blockquote class="blockquote">
 <p>“Le gouvernorat de la Banque de France fera l’objet d’une élection, et l’institution retrouvera des droits de tirage directs. Les hauts fonctionnaires se verront interdire toute transition vers l’espace politique, et restreindre lourdement toute interaction avec l’appareil de production privé.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=3">Comment fabriquer une guillotine 🐝 , p.3</a></p>
@@ -246,8 +342,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Renforcement de l’indépendance institutionnelle</li>
 </ul>
 </section>
-<section id="établissements-bancaires-publics" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" data-anchor-id="établissements-bancaires-publics"><span class="header-section-number">1.2.2</span> Établissements Bancaires Publics</h3>
+<section id="établissements-bancaires-publics" class="level3">
+<h3 data-anchor-id="établissements-bancaires-publics">Établissements Bancaires Publics</h3>
 <blockquote class="blockquote">
 <p>“Sera en parallèle adoptée, par référendum séparé, une loi créant des établissements bancaires publics, spécialisés dans l’investissement productif, par secteurs, sous la tutelle du gouvernement.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=3">Comment fabriquer une guillotine 🐝 , p.3</a></p>
@@ -261,10 +357,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="démantèlement-des-oligopoles" class="level2" data-number="1.3">
-<h2 data-number="1.3" data-anchor-id="démantèlement-des-oligopoles"><span class="header-section-number">1.3</span> Démantèlement des Oligopoles</h2>
-<section id="réforme-structurelle" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" data-anchor-id="réforme-structurelle"><span class="header-section-number">1.3.1</span> Réforme Structurelle</h3>
+<section id="démantèlement-des-oligopoles" class="level2">
+<h2 data-anchor-id="démantèlement-des-oligopoles">Démantèlement des Oligopoles</h2>
+<section id="réforme-structurelle" class="level3">
+<h3 data-anchor-id="réforme-structurelle">Réforme Structurelle</h3>
 <blockquote class="blockquote">
 <p>“Par le truchement de nouvelles règles antitrust et de procédures accélérées, déliées des contraintes européennes, une décomposition systémique des oligopoles et monopoles issus de l’État interviendra.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=4">Comment fabriquer une guillotine 🐝 , p.4</a></p>
@@ -277,8 +373,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Reconstruction d’une concurrence saine</li>
 </ul>
 </section>
-<section id="commande-publique" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" data-anchor-id="commande-publique"><span class="header-section-number">1.3.2</span> Commande Publique</h3>
+<section id="commande-publique" class="level3">
+<h3 data-anchor-id="commande-publique">Commande Publique</h3>
 <blockquote class="blockquote">
 <p>“Martin Bouygues et ses semblables auront à gagner leurs contrats d’État comme n’importe quelle autre société, et se verront proposer une nationalisation de l’ensemble de leurs entreprises liées à la commande publique.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=4">Comment fabriquer une guillotine 🐝 , p.4</a></p>
@@ -291,8 +387,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Restructuration des groupes dominants</li>
 </ul>
 </section>
-<section id="médias-et-communication" class="level3" data-number="1.3.3">
-<h3 data-number="1.3.3" data-anchor-id="médias-et-communication"><span class="header-section-number">1.3.3</span> Médias et Communication</h3>
+<section id="médias-et-communication" class="level3">
+<h3 data-anchor-id="médias-et-communication">Médias et Communication</h3>
 <blockquote class="blockquote">
 <p>“Bouygues comme Arnaud Lagardère, Patrick Drahi, Vincent Bolloré, Bernard Arnault, Rodolphe Saadé, Daniel Kretinsky et Patrick Drahi et Xavier Niel devront rétrocéder leurs participations médiatiques aux citoyens par le truchement de fondations d’adhésion libre et autogérées.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=4">Comment fabriquer une guillotine 🐝 , p.4</a></p>
@@ -305,8 +401,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Révision des avantages acquis</li>
 </ul>
 </section>
-<section id="infrastructure-numérique" class="level3" data-number="1.3.4">
-<h3 data-number="1.3.4" data-anchor-id="infrastructure-numérique"><span class="header-section-number">1.3.4</span> Infrastructure Numérique</h3>
+<section id="infrastructure-numérique" class="level3">
+<h3 data-anchor-id="infrastructure-numérique">Infrastructure Numérique</h3>
 <blockquote class="blockquote">
 <p>“Un seul réseau centralisé, national et imperméable à toute influence extérieure, qui préservera les Français de toute surveillance de masse et des interventions permanentes des puissances de l’étranger, sera à concevoir dans une grande loi de programmation industrielle.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=4">Comment fabriquer une guillotine 🐝 , p.4</a></p>
@@ -319,8 +415,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Souveraineté numérique totale</li>
 </ul>
 </section>
-<section id="paradis-fiscaux" class="level3" data-number="1.3.5">
-<h3 data-number="1.3.5" data-anchor-id="paradis-fiscaux"><span class="header-section-number">1.3.5</span> Paradis Fiscaux</h3>
+<section id="paradis-fiscaux" class="level3">
+<h3 data-anchor-id="paradis-fiscaux">Paradis Fiscaux</h3>
 <blockquote class="blockquote">
 <p>“À nos frontières poreuses se trouvent des points de fuite dont les noms, Monaco, Luxembourg, Andorre, riment avec corruption. Il y sera mis fin.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=5">Comment fabriquer une guillotine 🐝 , p.5</a></p>
@@ -334,10 +430,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="protection-sociale" class="level2" data-number="1.4">
-<h2 data-number="1.4" data-anchor-id="protection-sociale"><span class="header-section-number">1.4</span> Protection Sociale</h2>
-<section id="réformes-structurelles" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" data-anchor-id="réformes-structurelles"><span class="header-section-number">1.4.1</span> Réformes Structurelles</h3>
+<section id="protection-sociale" class="level2">
+<h2 data-anchor-id="protection-sociale">Protection Sociale</h2>
+<section id="réformes-structurelles" class="level3">
+<h3 data-anchor-id="réformes-structurelles">Réformes Structurelles</h3>
 <blockquote class="blockquote">
 <p>“Renforcement du contrôle des frais bancaires et hiérarchie des normes au sein de la loi travail, alignement des régimes de retraite et fixation des taux selon l’espérance de vie par catégorie sociale et professionnelle.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=25">Comment fabriquer une guillotine 🐝 , p.25</a></p>
@@ -350,8 +446,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Caisse unique de sécurité professionnelle</li>
 </ul>
 </section>
-<section id="lutte-contre-la-précarité" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" data-anchor-id="lutte-contre-la-précarité"><span class="header-section-number">1.4.2</span> Lutte contre la Précarité</h3>
+<section id="lutte-contre-la-précarité" class="level3">
+<h3 data-anchor-id="lutte-contre-la-précarité">Lutte contre la Précarité</h3>
 <blockquote class="blockquote">
 <p>“Lois sur la précarité et la sous-traitance prenant en compte la chronicité et la systématicité des dispositifs dérogatoires.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=25">Comment fabriquer une guillotine 🐝 , p.25</a></p>
@@ -365,10 +461,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="secteurs-stratégiques" class="level2" data-number="1.5">
-<h2 data-number="1.5" data-anchor-id="secteurs-stratégiques"><span class="header-section-number">1.5</span> Secteurs Stratégiques</h2>
-<section id="agriculture" class="level3" data-number="1.5.1">
-<h3 data-number="1.5.1" data-anchor-id="agriculture"><span class="header-section-number">1.5.1</span> Agriculture</h3>
+<section id="secteurs-stratégiques" class="level2">
+<h2 data-anchor-id="secteurs-stratégiques">Secteurs Stratégiques</h2>
+<section id="agriculture" class="level3">
+<h3 data-anchor-id="agriculture">Agriculture</h3>
 <ul>
 <li>Minimum vital garanti</li>
 <li>Contrôle des pesticides</li>
@@ -377,8 +473,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Traçabilité totale</li>
 </ul>
 </section>
-<section id="pêche" class="level3" data-number="1.5.2">
-<h3 data-number="1.5.2" data-anchor-id="pêche"><span class="header-section-number">1.5.2</span> Pêche</h3>
+<section id="pêche" class="level3">
+<h3 data-anchor-id="pêche">Pêche</h3>
 <blockquote class="blockquote">
 <p>“Loi sur la pêche permettant un renforcement de l’attractivité du secteur, des unités locales, la fin du chalutage en eaux profondes.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=25">Comment fabriquer une guillotine 🐝 , p.25</a></p>
@@ -391,8 +487,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Attractivité du secteur</li>
 </ul>
 </section>
-<section id="industrie" class="level3" data-number="1.5.3">
-<h3 data-number="1.5.3" data-anchor-id="industrie"><span class="header-section-number">1.5.3</span> Industrie</h3>
+<section id="industrie" class="level3">
+<h3 data-anchor-id="industrie">Industrie</h3>
 <blockquote class="blockquote">
 <p>“La reconstruction d’une indépendance économique passera par une brusque reconfiguration de notre appareil productif afin de ne plus dépendre de ces grands marchés que nous nous contentons aujourd’hui de piller – je pense à LVMH en Asie, Bolloré en Afrique, Vinci et tant d’autres structures moins visibles agissant dans le monde entier.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8">Comment fabriquer une guillotine 🐝 , p.8</a></p>
@@ -405,10 +501,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="médias-et-communication-1" class="level2" data-number="1.6">
-<h2 data-number="1.6" data-anchor-id="médias-et-communication-1"><span class="header-section-number">1.6</span> Médias et Communication</h2>
-<section id="indépendance" class="level3" data-number="1.6.1">
-<h3 data-number="1.6.1" data-anchor-id="indépendance"><span class="header-section-number">1.6.1</span> Indépendance</h3>
+<section id="médias-et-communication-1" class="level2">
+<h2 data-anchor-id="médias-et-communication-1">Médias et Communication</h2>
+<section id="indépendance" class="level3">
+<h3 data-anchor-id="indépendance">Indépendance</h3>
 <blockquote class="blockquote">
 <p>“Référendum portant sur l’indépendance et le financement de la presse et des médias, provoquant la déliaison tant espérée des puissances de l’argent et de la communication.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=25">Comment fabriquer une guillotine 🐝 , p.25</a></p>
@@ -420,8 +516,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Dispositifs citoyens autogérés</li>
 </ul>
 </section>
-<section id="audiovisuel" class="level3" data-number="1.6.2">
-<h3 data-number="1.6.2" data-anchor-id="audiovisuel"><span class="header-section-number">1.6.2</span> Audiovisuel</h3>
+<section id="audiovisuel" class="level3">
+<h3 data-anchor-id="audiovisuel">Audiovisuel</h3>
 <ul>
 <li>Révision des fréquences</li>
 <li>Cahier des charges de l’information</li>
@@ -432,10 +528,14 @@ ul.task-list li input[type="checkbox"] {
 
 </section>
 </section>
-</section>
 
 </main> <!-- /main -->
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2024 Aurores | <a href="https://aurores.org">aurores.org</a></p>
+  </div>
+</footer>
 
 
 

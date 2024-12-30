@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Comment fabriquer une guillotine 🐝 – Les Ruches 🐝</title>
+<title>Les Ruches</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -62,6 +62,83 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Recherche"
   }
 }</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const quotes = document.querySelectorAll('blockquote');
+    
+    quotes.forEach((quote, index) => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'quote-wrapper';
+        quote.parentNode.insertBefore(wrapper, quote);
+        wrapper.appendChild(quote);
+        
+        const shareButtons = document.createElement('div');
+        shareButtons.className = 'share-buttons';
+        shareButtons.style.display = 'none';
+        
+        const quoteText = quote.textContent.trim();
+        const pdfLink = 'https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf';
+        
+        const buttons = [
+            ['twitter', 'bi-twitter-x', `https://twitter.com/intent/tweet?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['bluesky', 'bi-cloud', `https://bsky.app/intent/compose?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['linkedin', 'bi-linkedin', `https://www.linkedin.com/sharing/share-offsite/?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['facebook', 'bi-facebook', `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pdfLink)}`],
+        ];
+        
+        buttons.forEach(([platform, icon, url]) => {
+            const link = document.createElement('a');
+            link.href = url;
+            link.className = `share-button ${platform}`;
+            link.target = '_blank';
+            link.rel = 'noopener';
+            
+            const iconElement = document.createElement('i');
+            iconElement.className = `bi ${icon}`;
+            link.appendChild(iconElement);
+            
+            shareButtons.appendChild(link);
+        });
+        
+        // Ajout du bouton Mastodon avec dialogue
+        const mastodonButton = document.createElement('a');
+        mastodonButton.href = '#';
+        mastodonButton.className = 'share-button mastodon';
+        mastodonButton.onclick = (e) => {
+            e.preventDefault();
+            const instance = prompt('Entrez votre instance Mastodon (ex: mastodon.social):', 'mastodon.social');
+            if (instance) {
+                const mastodonUrl = `https://${instance}/share?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`;
+                window.open(mastodonUrl, '_blank');
+            }
+        };
+        
+        const mastodonIcon = document.createElement('i');
+        mastodonIcon.className = 'bi bi-mastodon';
+        mastodonButton.appendChild(mastodonIcon);
+        shareButtons.appendChild(mastodonButton);
+        
+        wrapper.appendChild(shareButtons);
+        
+        wrapper.addEventListener('mouseenter', () => {
+            shareButtons.style.display = 'flex';
+        });
+        
+        wrapper.addEventListener('mouseleave', (e) => {
+            if (!e.relatedTarget || !e.relatedTarget.closest('.share-buttons')) {
+                shareButtons.style.display = 'none';
+            }
+        });
+        
+        shareButtons.addEventListener('mouseleave', () => {
+            if (!wrapper.matches(':hover')) {
+                shareButtons.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -75,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Les Ruches 🐝</span>
+    <span class="navbar-title">Les Ruches</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Recherche"></div>
@@ -89,12 +166,16 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./#"> 
+<span class="menu-text">|</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./pages/construire.html"> 
 <span class="menu-text">Construire</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pages/mesures-immediates.html"> 
-<span class="menu-text">Tout de suite</span></a>
+    <a class="nav-link" href="./#"> 
+<span class="menu-text">|</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./pages/economie.html"> 
@@ -105,16 +186,16 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Écologie</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pages/social.html"> 
-<span class="menu-text">Social</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./pages/education.html"> 
 <span class="menu-text">Éducation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./pages/institutions.html"> 
 <span class="menu-text">Institutions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./pages/social.html"> 
+<span class="menu-text">Social</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -126,82 +207,38 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Sommaire</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">0.1</span> Introduction</a></li>
-  <li><a href="#programme" id="toc-programme" class="nav-link" data-scroll-target="#programme"><span class="header-section-number">1</span> Programme</a>
-  <ul class="collapse">
-  <li><a href="#navigation" id="toc-navigation" class="nav-link" data-scroll-target="#navigation"><span class="header-section-number">1.1</span> Navigation</a></li>
-  </ul></li>
-  </ul>
-</nav>
-</nav>
+  
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Comment fabriquer une guillotine 🐝</h1>
-</div>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta column-page-right">
 
-    
-    <div>
-    <div class="quarto-title-meta-heading">Date de publication</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">29/12/2024 19:52</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p class="version-info">
-Version 0.1.0 | Mise à jour : 29/12/2024 19:52
-</p>
-<section id="introduction" class="level2" data-number="0.1">
-<h2 data-number="0.1" data-anchor-id="introduction"><span class="header-section-number">0.1</span> Introduction</h2>
-<p>Le pouvoir saisi, un référendum sur les institutions sera tenu. Ce programme détaille les transformations nécessaires pour refonder notre République.</p>
-</section>
-<section id="programme" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Programme</h1>
-<p>Ce site web est une adaptation numérique du programme politique “Comment fabriquer une guillotine”, rendue possible grâce à l’utilisation des technologies d’intelligence artificielle (SONNET 3.5 et Windsurf AI) et d’un travail minutieux d’organisation et de structuration. Notre objectif a été de rendre ce texte programmatique accessible et navigable sur le web, tout en préservant scrupuleusement sa substance et son intention originelle.</p>
+<p>Ce site web est une adaptation numérique du programme politique “<strong>Comment fabriquer une guillotine 🐝</strong>”, rendue possible grâce à l’utilisation des technologies d’intelligence artificielle (SONNET 3.5 et Windsurf AI) et d’un travail minutieux d’organisation et de structuration. Notre objectif a été de rendre ce texte programmatique accessible et navigable sur le web, tout en préservant scrupuleusement sa substance et son intention originelle.</p>
 <p>Chaque section a été méticuleusement organisée pour refléter avec la plus grande fidélité possible le contenu source. Les citations directes du texte original sont systématiquement référencées avec des liens vers les pages correspondantes du PDF source, permettant ainsi aux lecteurs de vérifier et de contextualiser chaque élément programmatique.</p>
 <p>Cette adaptation numérique n’est ni une réécriture ni une interprétation, mais une restructuration fidèle visant à faciliter l’accès et la compréhension du programme original. Nous avons maintenu l’intégralité des propositions et leur articulation, en les organisant de manière thématique pour une navigation plus intuitive.</p>
-<section id="navigation" class="level2" data-number="1.1">
-<h2 data-number="1.1" data-anchor-id="navigation"><span class="header-section-number">1.1</span> Navigation</h2>
-<p>Le programme est organisé en sections thématiques :</p>
 <ul>
+<li><a href="./pages/construire.html">Construire</a> : Vision globale de la reconstruction nationale</li>
 <li><a href="./pages/economie.html">Économie</a> : Souveraineté économique et rupture avec l’oligarchisation</li>
 <li><a href="./pages/ecologie.html">Écologie</a> : Transformation écologique et protection de la biodiversité</li>
 <li><a href="./pages/social.html">Social</a> : Refondation sociale et protection universelle</li>
 <li><a href="./pages/education.html">Éducation</a> : Réforme du système éducatif et revalorisation des enseignants</li>
 <li><a href="./pages/institutions.html">Institutions</a> : Refonte constitutionnelle et démocratique</li>
-<li><a href="./pages/mesures-immediates.html">Mesures Immédiates</a> : Actions prioritaires et urgentes</li>
-<li><a href="./pages/construire.html">Construire</a> : Vision globale de la reconstruction nationale</li>
 </ul>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2024 Aurores | <a href="https://aurores.org">aurores.org</a></p>
+  </div>
+</footer>
 
 
 

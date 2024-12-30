@@ -2,9 +2,13 @@
 title: "Éducation"
 ---
 
-# Éducation
+La refondation du système éducatif s'appuiera sur une loi de programmation souveraine qui fera des fonctionnaires éducationnels les piliers de notre pays. 
 
-La refondation du système éducatif s'appuiera sur une loi de programmation souveraine qui fera des fonctionnaires éducationnels les piliers de notre pays. L'enseignement sera transformé avec l'introduction du plurilinguisme dès le CP et la création d'un examen d'entrée national en sixième. L'accent sera mis sur la maîtrise des fondamentaux en histoire, langues et mathématiques. Cette réforme s'accompagnera d'une revalorisation majeure du statut des enseignants et d'une refonte complète des corps éducatifs, visant à restaurer leur fierté et leur autonomie professionnelle.
+L'enseignement sera transformé avec l'introduction du plurilinguisme dès le CP et la création d'un examen d'entrée national en sixième. 
+
+L'accent sera mis sur la maîtrise des fondamentaux en histoire, langues et mathématiques. 
+
+Cette réforme s'accompagnera d'une revalorisation majeure du statut des enseignants et d'une refonte complète des corps éducatifs, visant à restaurer leur fierté et leur autonomie professionnelle.
 
 ## Réforme de l'Éducation
 
@@ -12,7 +16,7 @@ La refondation du système éducatif s'appuiera sur une loi de programmation sou
 
 ### Universités et Recherche
 > "On ne « revalorisera » pas : on consacrera ces êtres qui se sont donnés au commun, leur rendant cette primauté symbolique et sociale qui n'aurait jamais dû leur être retirée."  
-> [Comment fabriquer une guillotine 🐝, p.8](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8){:target="_blank"}
+> [Comment fabriquer une guillotine 🐝, p.8](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8)
 
 - Consécration des enseignants-chercheurs comme piliers de la nation
 - Refondation des corps d'ingénierie et de recherche
@@ -24,7 +28,7 @@ La refondation du système éducatif s'appuiera sur une loi de programmation sou
 
 ### Accès Universel
 > "Quatre lois de programmation souveraine seront adoptées sur les questions de santé, d'énergie, d'enseignement et de numérique."  
-> [Comment fabriquer une guillotine 🐝, p.8](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8){:target="_blank"}
+> [Comment fabriquer une guillotine 🐝, p.8](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8)
 
 - Loi de programmation souveraine sur l'enseignement
 - Accès garanti aux ressources éducatives
@@ -34,7 +38,7 @@ La refondation du système éducatif s'appuiera sur une loi de programmation sou
 
 ### Principe d'Égalité
 > Nous nourrirons la France de ses rêves atrophiés : qui, mécanicien, souhaitait devenir médecin le pourra. À quelque âge que ce soit.  
-> [Comment fabriquer une guillotine 🐝, p.26](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=26){:target="_blank"}
+> [Comment fabriquer une guillotine 🐝, p.26](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=26)
 
 - Reconversion professionnelle totale
 - Égalité des chances réelle
@@ -52,7 +56,7 @@ La refondation du système éducatif s'appuiera sur une loi de programmation sou
 
 ### Réforme Fondamentale
 > "En amont, une politique éducative refondée sur l'acquisition des « fondamentaux » et un accroissement massif de la recherche permettront de renforcer des structures scientifiques en perdition."  
-> [Comment fabriquer une guillotine 🐝, p.6](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=6){:target="_blank"}
+> [Comment fabriquer une guillotine 🐝, p.6](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=6)
 
 - Refondation sur l'acquisition des fondamentaux
 - Renforcement des structures scientifiques
@@ -62,7 +66,7 @@ La refondation du système éducatif s'appuiera sur une loi de programmation sou
 
 ### Mesures Concrètes
 > Augmentation des salaires des professeurs du secondaire, création de manuels uniques édités par un pôle public, suppression de la distinction Capes/agrégation, renationalisation et reterminalisation du baccalauréat.  
-> [Comment fabriquer une guillotine 🐝, p.27](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27){:target="_blank"}
+> [Comment fabriquer une guillotine 🐝, p.27](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27)
 
 - Revalorisation salariale des enseignants
 - Manuels nationaux publics
@@ -72,7 +76,7 @@ La refondation du système éducatif s'appuiera sur une loi de programmation sou
 
 ### Innovation Pédagogique
 > "Généralisation du principe de l'enseignement plurilingue à partir du CP. Création d'un examen d'entrée national en sixième."  
-> [Comment fabriquer une guillotine 🐝, p.35](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=35){:target="_blank"}
+> [Comment fabriquer une guillotine 🐝, p.35](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=35)
 
 - Enseignement plurilingue obligatoire dès le CP
 - Examen d'entrée national en sixième
@@ -82,7 +86,7 @@ La refondation du système éducatif s'appuiera sur une loi de programmation sou
 
 ### Réforme Structurelle
 > Refonte de la politique éducative à destination des plus fragiles par le truchement d'une dualisation des systèmes éducatifs doublée de la création de passerelles systématiques.  
-> [Comment fabriquer une guillotine 🐝, p.27](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27){:target="_blank"}
+> [Comment fabriquer une guillotine 🐝, p.27](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27)
 
 - Dualisation du système éducatif
 - Passerelles multiples
@@ -92,7 +96,7 @@ La refondation du système éducatif s'appuiera sur une loi de programmation sou
 
 ### Nouveaux Corps Enseignants
 > "Elles feront à nouveau des fonctionnaires médicaux et éducationnels les piliers et la fierté de notre pays, aux côtés des corps d'ingénierie et de recherche, qui seront entièrement refondés."  
-> [Comment fabriquer une guillotine 🐝, p.8](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8){:target="_blank"}
+> [Comment fabriquer une guillotine 🐝, p.8](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8)
 
 - Refondation complète des corps enseignants
 - Rétablissement comme piliers de la nation
@@ -111,7 +115,7 @@ La refondation du système éducatif s'appuiera sur une loi de programmation sou
 
 ### Promotion et Excellence
 > "Nous serons brillants car tel est l'esprit de ce pays, scientifique et cartésien, capable de produire de la pensée lorsque nous n'avions pas encore été colonisés."  
-> [Comment fabriquer une guillotine 🐝, p.6](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=6){:target="_blank"}
+> [Comment fabriquer une guillotine 🐝, p.6](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=6)
 
 - Rétablissement de l'esprit scientifique et cartésien
 - Production autonome de la pensée
@@ -121,7 +125,7 @@ La refondation du système éducatif s'appuiera sur une loi de programmation sou
 
 ### Réforme du Lycée
 > Le lycée redeviendra un lieu de formation à l'accès sélectif, garant d'une forme d'éducation spécifique, égalisée avec les autres voies d'accès au savoir, à la création et à la pensée.  
-> [Comment fabriquer une guillotine 🐝, p.27](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27){:target="_blank"}
+> [Comment fabriquer une guillotine 🐝, p.27](https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27)
 
 - Sélectivité assumée
 - Excellence académique

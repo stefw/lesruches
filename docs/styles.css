@@ -3,12 +3,109 @@
 
 /* Variables */
 :root {
-    --content-width: 1200px;
-    --link-color: #0645ad;
-    --link-hover: #0b0080;
-    --border-color: #a2a9b1;
+    --content-width: 900px;
+    --link-color: #0000CC;
+    --link-hover: #000000;
     --toc-background: #f8f9fa;
-    --sidebar-width: 250px;
+    --sidebar-width: 350px;
+}
+
+
+.navbar {
+    background-color: #FFF;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.navbar-brand {
+    display: none;
+}
+
+.navbar::before {
+    content: "Les Ruches";
+    font-family: "Linux Libertine", serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+
+.navbar::after {
+    content: "🐝";
+    font-size: 1rem;
+    position: absolute;
+    top: 1.7rem;
+    margin-left: 0.8rem;
+    transform: translateX(90px);
+}
+
+.navbar > .container-fluid {
+    justify-content: center;
+}
+
+.navbar-nav-scroll {
+    --bs-scroll-height: 100vh;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    color: var(--link-color) !important;
+    position: relative;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem !important;
+}
+
+.nav-link:hover {
+    color: var(--link-hover) !important;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    color: #000 !important;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0.5rem;
+    right: 0.5rem;
+    height: 1px;
+    background-color: #DEDEDE
+}
+
+.navbar-nav .nav-item:has(a[href="#"]) {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
+    margin: 0 0.5rem;
+}
+
+/* Title */
+.navbar-title {
+    font-family: "Linux Libertine", serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+}
+
+.navbar-title::after {
+    content: "🐝";
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    vertical-align: middle;
 }
 
 /* Base */
@@ -63,7 +160,7 @@ h1, h2 {
 
 /* Links */
 a {
-    color: var(--link-color);
+    color: #0000CC;
     text-decoration: none;
 }
 
@@ -75,15 +172,17 @@ a:hover {
 /* TOC */
 #TOC {
     font-size: 0.9rem;
-    border: 1px solid var(--border-color);
-    background: var(--toc-background);
-    padding: 1rem;
     margin-bottom: 1rem;
 }
 
 .toc-active {
     color: var(--link-hover);
 }
+#TOC a {
+    font-size: 0.7rem;
+    color: #0000CC;
+}
+
 
 /* TOC styles */
 .sidebar-tools-main, .toc {
@@ -126,29 +225,28 @@ pre {
     overflow-x: auto;
 }
 
-/* Navigation */
-.nav-link {
-    color: var(--link-color) !important;
-}
-
-.nav-link:hover {
-    color: var(--link-hover) !important;
-    text-decoration: underline;
-}
-
 /* Blockquotes */
+.quote-wrapper {
+    position: relative;
+    padding-right: 40px; /* Espace pour les boutons */
+}
+
 blockquote {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0; /* Reset la marge par défaut */
     background-color: #000;
-    margin: 1.5em 0;
     padding:3em;
     color: #ffc107 !important;
-    max-width: 85%;
+
 }
 
 blockquote p {
     margin: 0;
     font-size: 0.9em;
     line-height: 1.6;
+    font-weight: 500;
 }
 
 blockquote a {
@@ -157,6 +255,36 @@ blockquote a {
     padding-top: 2em;
     float: right;
 }
+
+.share-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1000;
+}
+
+.share-button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #333;
+    color: #ffc107  !important;
+    text-decoration: none;
+    font-size: 14px;
+    transition: transform 0.2s;
+}
+
+.share-button:hover {
+    transform: scale(1.1);
+}
+
+
 
 /* Links Section */
 .links-section {
@@ -176,6 +304,7 @@ blockquote a {
 
 /* Info Section */
 .info-section {
+    font-family: 'Arial', monospace;
     padding: 1rem;
     background-color: #f8f9fa;
     border-radius: 4px;
@@ -185,6 +314,7 @@ blockquote a {
     margin: 0;
     font-size: 0.9rem;
     color: #666;
+    font-family: 'Arial', monospace;
 }
 
 .info-section hr {
@@ -198,8 +328,7 @@ blockquote a {
     color: #666;
     margin-top: -1em;
     margin-bottom: 2em;
-    font-style: italic;
-    font-family: 'Courier New', monospace;
+    font-family: 'Arial', monospace;
 }
 
 /* Sidebar */
@@ -219,7 +348,45 @@ blockquote a {
     color: initial;
 }
 
+/* Footer */
+.footer {
+    font-size: 0.9rem;
+
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-content {
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer a {
+    color: #ffc107 !important;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
 /* Responsive */
+@media (max-width: 991px) {
+    .navbar-nav .nav-item:has(a[href="#"]) {
+        display: none;
+    }
+    
+    .page-columns {
+        display: grid;
+        gap: 0;
+        grid-template-columns: 100%;
+    }
+    
+    .content {
+        padding: 1rem;
+    }
+}
+
 @media (max-width: 1200px) {
     .page-columns {
         grid-template-columns: 1fr;

@@ -3,27 +3,29 @@ project:
   output-dir: docs
 
 website:
-  title: "Les Ruches 🐝"
+  title: "Les Ruches"
   navbar:
     background: light
+    title: ""
     left:
       - text: "Accueil"
         href: index.qmd
+      - text: "|"
+        href: "#"
       - text: "Construire"
         href: pages/construire.qmd
-      - href: pages/mesures-immediates.qmd
-        text: "Tout de suite"
+      - text: "|"
+        href: "#"
       - text: "Économie"
         href: pages/economie.qmd
       - text: "Écologie"
         href: pages/ecologie.qmd
-      - text: "Social"
-        href: pages/social.qmd
       - text: "Éducation"
         href: pages/education.qmd
       - text: "Institutions"
         href: pages/institutions.qmd
-
+      - text: "Social"
+        href: pages/social.qmd
 
   page-navigation: true
   sidebar:
@@ -45,6 +47,7 @@ website:
             - text: "GitHub"
               href: https://github.com/stefw/lesruches
 
+
 format:
   html:
     theme: cosmo
@@ -52,10 +55,96 @@ format:
     toc: true
     toc-location: left
     toc-title: "Sommaire"
-    number-sections: true
+    number-sections: false
     mainfont: "Linux Libertine"
     page-layout: full
     minimal: true
     compress: true
     lang: fr
     date-format: "DD/MM/YYYY HH:mm"
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              const quotes = document.querySelectorAll('blockquote');
+              
+              quotes.forEach((quote, index) => {
+                  const wrapper = document.createElement('div');
+                  wrapper.className = 'quote-wrapper';
+                  quote.parentNode.insertBefore(wrapper, quote);
+                  wrapper.appendChild(quote);
+                  
+                  const shareButtons = document.createElement('div');
+                  shareButtons.className = 'share-buttons';
+                  shareButtons.style.display = 'none';
+                  
+                  const quoteText = quote.textContent.trim();
+                  const pdfLink = 'https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf';
+                  
+                  const buttons = [
+                      ['twitter', 'bi-twitter-x', `https://twitter.com/intent/tweet?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+                      ['bluesky', 'bi-cloud', `https://bsky.app/intent/compose?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+                      ['linkedin', 'bi-linkedin', `https://www.linkedin.com/sharing/share-offsite/?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+                      ['facebook', 'bi-facebook', `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pdfLink)}`],
+                  ];
+                  
+                  buttons.forEach(([platform, icon, url]) => {
+                      const link = document.createElement('a');
+                      link.href = url;
+                      link.className = `share-button ${platform}`;
+                      link.target = '_blank';
+                      link.rel = 'noopener';
+                      
+                      const iconElement = document.createElement('i');
+                      iconElement.className = `bi ${icon}`;
+                      link.appendChild(iconElement);
+                      
+                      shareButtons.appendChild(link);
+                  });
+                  
+                  // Ajout du bouton Mastodon avec dialogue
+                  const mastodonButton = document.createElement('a');
+                  mastodonButton.href = '#';
+                  mastodonButton.className = 'share-button mastodon';
+                  mastodonButton.onclick = (e) => {
+                      e.preventDefault();
+                      const instance = prompt('Entrez votre instance Mastodon (ex: mastodon.social):', 'mastodon.social');
+                      if (instance) {
+                          const mastodonUrl = `https://${instance}/share?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`;
+                          window.open(mastodonUrl, '_blank');
+                      }
+                  };
+                  
+                  const mastodonIcon = document.createElement('i');
+                  mastodonIcon.className = 'bi bi-mastodon';
+                  mastodonButton.appendChild(mastodonIcon);
+                  shareButtons.appendChild(mastodonButton);
+                  
+                  wrapper.appendChild(shareButtons);
+                  
+                  wrapper.addEventListener('mouseenter', () => {
+                      shareButtons.style.display = 'flex';
+                  });
+                  
+                  wrapper.addEventListener('mouseleave', (e) => {
+                      if (!e.relatedTarget || !e.relatedTarget.closest('.share-buttons')) {
+                          shareButtons.style.display = 'none';
+                      }
+                  });
+                  
+                  shareButtons.addEventListener('mouseleave', () => {
+                      if (!wrapper.matches(':hover')) {
+                          shareButtons.style.display = 'none';
+                      }
+                  });
+              });
+          });
+          </script>
+    include-after-body:
+      - text: |
+          <footer class="footer">
+            <div class="footer-content">
+              <p>&copy; 2024 Aurores | <a href="https://aurores.org">aurores.org</a></p>
+            </div>
+          </footer>

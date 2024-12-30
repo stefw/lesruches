@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Éducation – Les Ruches 🐝</title>
+<title>Éducation – Les Ruches</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -62,6 +62,83 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Recherche"
   }
 }</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const quotes = document.querySelectorAll('blockquote');
+    
+    quotes.forEach((quote, index) => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'quote-wrapper';
+        quote.parentNode.insertBefore(wrapper, quote);
+        wrapper.appendChild(quote);
+        
+        const shareButtons = document.createElement('div');
+        shareButtons.className = 'share-buttons';
+        shareButtons.style.display = 'none';
+        
+        const quoteText = quote.textContent.trim();
+        const pdfLink = 'https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf';
+        
+        const buttons = [
+            ['twitter', 'bi-twitter-x', `https://twitter.com/intent/tweet?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['bluesky', 'bi-cloud', `https://bsky.app/intent/compose?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['linkedin', 'bi-linkedin', `https://www.linkedin.com/sharing/share-offsite/?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['facebook', 'bi-facebook', `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pdfLink)}`],
+        ];
+        
+        buttons.forEach(([platform, icon, url]) => {
+            const link = document.createElement('a');
+            link.href = url;
+            link.className = `share-button ${platform}`;
+            link.target = '_blank';
+            link.rel = 'noopener';
+            
+            const iconElement = document.createElement('i');
+            iconElement.className = `bi ${icon}`;
+            link.appendChild(iconElement);
+            
+            shareButtons.appendChild(link);
+        });
+        
+        // Ajout du bouton Mastodon avec dialogue
+        const mastodonButton = document.createElement('a');
+        mastodonButton.href = '#';
+        mastodonButton.className = 'share-button mastodon';
+        mastodonButton.onclick = (e) => {
+            e.preventDefault();
+            const instance = prompt('Entrez votre instance Mastodon (ex: mastodon.social):', 'mastodon.social');
+            if (instance) {
+                const mastodonUrl = `https://${instance}/share?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`;
+                window.open(mastodonUrl, '_blank');
+            }
+        };
+        
+        const mastodonIcon = document.createElement('i');
+        mastodonIcon.className = 'bi bi-mastodon';
+        mastodonButton.appendChild(mastodonIcon);
+        shareButtons.appendChild(mastodonButton);
+        
+        wrapper.appendChild(shareButtons);
+        
+        wrapper.addEventListener('mouseenter', () => {
+            shareButtons.style.display = 'flex';
+        });
+        
+        wrapper.addEventListener('mouseleave', (e) => {
+            if (!e.relatedTarget || !e.relatedTarget.closest('.share-buttons')) {
+                shareButtons.style.display = 'none';
+            }
+        });
+        
+        shareButtons.addEventListener('mouseleave', () => {
+            if (!wrapper.matches(':hover')) {
+                shareButtons.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -75,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Les Ruches 🐝</span>
+    <span class="navbar-title">Les Ruches</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Recherche"></div>
@@ -89,12 +166,16 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../#"> 
+<span class="menu-text">|</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../pages/construire.html"> 
 <span class="menu-text">Construire</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pages/mesures-immediates.html"> 
-<span class="menu-text">Tout de suite</span></a>
+    <a class="nav-link" href="../#"> 
+<span class="menu-text">|</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../pages/economie.html"> 
@@ -105,16 +186,16 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Écologie</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pages/social.html"> 
-<span class="menu-text">Social</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="../pages/education.html" aria-current="page"> 
 <span class="menu-text">Éducation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../pages/institutions.html"> 
 <span class="menu-text">Institutions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../pages/social.html"> 
+<span class="menu-text">Social</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -131,39 +212,36 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sommaire</h2>
    
   <ul>
-  <li><a href="#éducation" id="toc-éducation" class="nav-link active" data-scroll-target="#éducation"><span class="header-section-number">1</span> Éducation</a>
+  <li><a href="#réforme-de-léducation" id="toc-réforme-de-léducation" class="nav-link active" data-scroll-target="#réforme-de-léducation">Réforme de l’Éducation</a></li>
+  <li><a href="#enseignement-supérieur" id="toc-enseignement-supérieur" class="nav-link" data-scroll-target="#enseignement-supérieur">Enseignement Supérieur</a>
   <ul class="collapse">
-  <li><a href="#réforme-de-léducation" id="toc-réforme-de-léducation" class="nav-link" data-scroll-target="#réforme-de-léducation"><span class="header-section-number">1.1</span> Réforme de l’Éducation</a></li>
-  <li><a href="#enseignement-supérieur" id="toc-enseignement-supérieur" class="nav-link" data-scroll-target="#enseignement-supérieur"><span class="header-section-number">1.2</span> Enseignement Supérieur</a>
-  <ul class="collapse">
-  <li><a href="#universités-et-recherche" id="toc-universités-et-recherche" class="nav-link" data-scroll-target="#universités-et-recherche"><span class="header-section-number">1.2.1</span> Universités et Recherche</a></li>
+  <li><a href="#universités-et-recherche" id="toc-universités-et-recherche" class="nav-link" data-scroll-target="#universités-et-recherche">Universités et Recherche</a></li>
   </ul></li>
-  <li><a href="#formation-continue" id="toc-formation-continue" class="nav-link" data-scroll-target="#formation-continue"><span class="header-section-number">1.3</span> Formation Continue</a>
+  <li><a href="#formation-continue" id="toc-formation-continue" class="nav-link" data-scroll-target="#formation-continue">Formation Continue</a>
   <ul class="collapse">
-  <li><a href="#accès-universel" id="toc-accès-universel" class="nav-link" data-scroll-target="#accès-universel"><span class="header-section-number">1.3.1</span> Accès Universel</a></li>
-  <li><a href="#principe-dégalité" id="toc-principe-dégalité" class="nav-link" data-scroll-target="#principe-dégalité"><span class="header-section-number">1.3.2</span> Principe d’Égalité</a></li>
-  <li><a href="#dispositifs" id="toc-dispositifs" class="nav-link" data-scroll-target="#dispositifs"><span class="header-section-number">1.3.3</span> Dispositifs</a></li>
+  <li><a href="#accès-universel" id="toc-accès-universel" class="nav-link" data-scroll-target="#accès-universel">Accès Universel</a></li>
+  <li><a href="#principe-dégalité" id="toc-principe-dégalité" class="nav-link" data-scroll-target="#principe-dégalité">Principe d’Égalité</a></li>
+  <li><a href="#dispositifs" id="toc-dispositifs" class="nav-link" data-scroll-target="#dispositifs">Dispositifs</a></li>
   </ul></li>
-  <li><a href="#éducation-primaire-et-secondaire" id="toc-éducation-primaire-et-secondaire" class="nav-link" data-scroll-target="#éducation-primaire-et-secondaire"><span class="header-section-number">1.4</span> Éducation Primaire et Secondaire</a>
+  <li><a href="#éducation-primaire-et-secondaire" id="toc-éducation-primaire-et-secondaire" class="nav-link" data-scroll-target="#éducation-primaire-et-secondaire">Éducation Primaire et Secondaire</a>
   <ul class="collapse">
-  <li><a href="#réforme-fondamentale" id="toc-réforme-fondamentale" class="nav-link" data-scroll-target="#réforme-fondamentale"><span class="header-section-number">1.4.1</span> Réforme Fondamentale</a></li>
-  <li><a href="#mesures-concrètes" id="toc-mesures-concrètes" class="nav-link" data-scroll-target="#mesures-concrètes"><span class="header-section-number">1.4.2</span> Mesures Concrètes</a></li>
-  <li><a href="#innovation-pédagogique" id="toc-innovation-pédagogique" class="nav-link" data-scroll-target="#innovation-pédagogique"><span class="header-section-number">1.4.3</span> Innovation Pédagogique</a></li>
-  <li><a href="#réforme-structurelle" id="toc-réforme-structurelle" class="nav-link" data-scroll-target="#réforme-structurelle"><span class="header-section-number">1.4.4</span> Réforme Structurelle</a></li>
-  <li><a href="#nouveaux-corps-enseignants" id="toc-nouveaux-corps-enseignants" class="nav-link" data-scroll-target="#nouveaux-corps-enseignants"><span class="header-section-number">1.4.5</span> Nouveaux Corps Enseignants</a></li>
-  <li><a href="#direction-et-administration" id="toc-direction-et-administration" class="nav-link" data-scroll-target="#direction-et-administration"><span class="header-section-number">1.4.6</span> Direction et Administration</a></li>
+  <li><a href="#réforme-fondamentale" id="toc-réforme-fondamentale" class="nav-link" data-scroll-target="#réforme-fondamentale">Réforme Fondamentale</a></li>
+  <li><a href="#mesures-concrètes" id="toc-mesures-concrètes" class="nav-link" data-scroll-target="#mesures-concrètes">Mesures Concrètes</a></li>
+  <li><a href="#innovation-pédagogique" id="toc-innovation-pédagogique" class="nav-link" data-scroll-target="#innovation-pédagogique">Innovation Pédagogique</a></li>
+  <li><a href="#réforme-structurelle" id="toc-réforme-structurelle" class="nav-link" data-scroll-target="#réforme-structurelle">Réforme Structurelle</a></li>
+  <li><a href="#nouveaux-corps-enseignants" id="toc-nouveaux-corps-enseignants" class="nav-link" data-scroll-target="#nouveaux-corps-enseignants">Nouveaux Corps Enseignants</a></li>
+  <li><a href="#direction-et-administration" id="toc-direction-et-administration" class="nav-link" data-scroll-target="#direction-et-administration">Direction et Administration</a></li>
   </ul></li>
-  <li><a href="#langue-française" id="toc-langue-française" class="nav-link" data-scroll-target="#langue-française"><span class="header-section-number">1.5</span> Langue Française</a>
+  <li><a href="#langue-française" id="toc-langue-française" class="nav-link" data-scroll-target="#langue-française">Langue Française</a>
   <ul class="collapse">
-  <li><a href="#promotion-et-excellence" id="toc-promotion-et-excellence" class="nav-link" data-scroll-target="#promotion-et-excellence"><span class="header-section-number">1.5.1</span> Promotion et Excellence</a></li>
-  <li><a href="#réforme-du-lycée" id="toc-réforme-du-lycée" class="nav-link" data-scroll-target="#réforme-du-lycée"><span class="header-section-number">1.5.2</span> Réforme du Lycée</a></li>
-  <li><a href="#démocratisation-du-savoir" id="toc-démocratisation-du-savoir" class="nav-link" data-scroll-target="#démocratisation-du-savoir"><span class="header-section-number">1.5.3</span> Démocratisation du Savoir</a></li>
+  <li><a href="#promotion-et-excellence" id="toc-promotion-et-excellence" class="nav-link" data-scroll-target="#promotion-et-excellence">Promotion et Excellence</a></li>
+  <li><a href="#réforme-du-lycée" id="toc-réforme-du-lycée" class="nav-link" data-scroll-target="#réforme-du-lycée">Réforme du Lycée</a></li>
+  <li><a href="#démocratisation-du-savoir" id="toc-démocratisation-du-savoir" class="nav-link" data-scroll-target="#démocratisation-du-savoir">Démocratisation du Savoir</a></li>
   </ul></li>
-  <li><a href="#mesures-spécifiques" id="toc-mesures-spécifiques" class="nav-link" data-scroll-target="#mesures-spécifiques"><span class="header-section-number">1.6</span> Mesures Spécifiques</a>
+  <li><a href="#mesures-spécifiques" id="toc-mesures-spécifiques" class="nav-link" data-scroll-target="#mesures-spécifiques">Mesures Spécifiques</a>
   <ul class="collapse">
-  <li><a href="#statut-des-établissements" id="toc-statut-des-établissements" class="nav-link" data-scroll-target="#statut-des-établissements"><span class="header-section-number">1.6.1</span> Statut des Établissements</a></li>
-  <li><a href="#ressources-et-matériel" id="toc-ressources-et-matériel" class="nav-link" data-scroll-target="#ressources-et-matériel"><span class="header-section-number">1.6.2</span> Ressources et Matériel</a></li>
-  </ul></li>
+  <li><a href="#statut-des-établissements" id="toc-statut-des-établissements" class="nav-link" data-scroll-target="#statut-des-établissements">Statut des Établissements</a></li>
+  <li><a href="#ressources-et-matériel" id="toc-ressources-et-matériel" class="nav-link" data-scroll-target="#ressources-et-matériel">Ressources et Matériel</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -194,19 +272,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="éducation" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Éducation</h1>
-<p>La refondation du système éducatif s’appuiera sur une loi de programmation souveraine qui fera des fonctionnaires éducationnels les piliers de notre pays. L’enseignement sera transformé avec l’introduction du plurilinguisme dès le CP et la création d’un examen d’entrée national en sixième. L’accent sera mis sur la maîtrise des fondamentaux en histoire, langues et mathématiques. Cette réforme s’accompagnera d’une revalorisation majeure du statut des enseignants et d’une refonte complète des corps éducatifs, visant à restaurer leur fierté et leur autonomie professionnelle.</p>
-<section id="réforme-de-léducation" class="level2" data-number="1.1">
-<h2 data-number="1.1" data-anchor-id="réforme-de-léducation"><span class="header-section-number">1.1</span> Réforme de l’Éducation</h2>
+<p>La refondation du système éducatif s’appuiera sur une loi de programmation souveraine qui fera des fonctionnaires éducationnels les piliers de notre pays.</p>
+<p>L’enseignement sera transformé avec l’introduction du plurilinguisme dès le CP et la création d’un examen d’entrée national en sixième.</p>
+<p>L’accent sera mis sur la maîtrise des fondamentaux en histoire, langues et mathématiques.</p>
+<p>Cette réforme s’accompagnera d’une revalorisation majeure du statut des enseignants et d’une refonte complète des corps éducatifs, visant à restaurer leur fierté et leur autonomie professionnelle.</p>
+<section id="réforme-de-léducation" class="level2">
+<h2 data-anchor-id="réforme-de-léducation">Réforme de l’Éducation</h2>
 </section>
-<section id="enseignement-supérieur" class="level2" data-number="1.2">
-<h2 data-number="1.2" data-anchor-id="enseignement-supérieur"><span class="header-section-number">1.2</span> Enseignement Supérieur</h2>
-<section id="universités-et-recherche" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" data-anchor-id="universités-et-recherche"><span class="header-section-number">1.2.1</span> Universités et Recherche</h3>
+<section id="enseignement-supérieur" class="level2">
+<h2 data-anchor-id="enseignement-supérieur">Enseignement Supérieur</h2>
+<section id="universités-et-recherche" class="level3">
+<h3 data-anchor-id="universités-et-recherche">Universités et Recherche</h3>
 <blockquote class="blockquote">
 <p>“On ne « revalorisera » pas : on consacrera ces êtres qui se sont donnés au commun, leur rendant cette primauté symbolique et sociale qui n’aurait jamais dû leur être retirée.”<br>
-<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8">Comment fabriquer une guillotine 🐝, p.8</a>{:target=“_blank”}</p>
+<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8">Comment fabriquer une guillotine 🐝, p.8</a></p>
 </blockquote>
 <ul>
 <li>Consécration des enseignants-chercheurs comme piliers de la nation</li>
@@ -217,13 +296,13 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="formation-continue" class="level2" data-number="1.3">
-<h2 data-number="1.3" data-anchor-id="formation-continue"><span class="header-section-number">1.3</span> Formation Continue</h2>
-<section id="accès-universel" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" data-anchor-id="accès-universel"><span class="header-section-number">1.3.1</span> Accès Universel</h3>
+<section id="formation-continue" class="level2">
+<h2 data-anchor-id="formation-continue">Formation Continue</h2>
+<section id="accès-universel" class="level3">
+<h3 data-anchor-id="accès-universel">Accès Universel</h3>
 <blockquote class="blockquote">
 <p>“Quatre lois de programmation souveraine seront adoptées sur les questions de santé, d’énergie, d’enseignement et de numérique.”<br>
-<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8">Comment fabriquer une guillotine 🐝, p.8</a>{:target=“_blank”}</p>
+<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8">Comment fabriquer une guillotine 🐝, p.8</a></p>
 </blockquote>
 <ul>
 <li>Loi de programmation souveraine sur l’enseignement</li>
@@ -233,11 +312,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Sécurisation des parcours de formation</li>
 </ul>
 </section>
-<section id="principe-dégalité" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" data-anchor-id="principe-dégalité"><span class="header-section-number">1.3.2</span> Principe d’Égalité</h3>
+<section id="principe-dégalité" class="level3">
+<h3 data-anchor-id="principe-dégalité">Principe d’Égalité</h3>
 <blockquote class="blockquote">
 <p>Nous nourrirons la France de ses rêves atrophiés : qui, mécanicien, souhaitait devenir médecin le pourra. À quelque âge que ce soit.<br>
-<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=26">Comment fabriquer une guillotine 🐝, p.26</a>{:target=“_blank”}</p>
+<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=26">Comment fabriquer une guillotine 🐝, p.26</a></p>
 </blockquote>
 <ul>
 <li>Reconversion professionnelle totale</li>
@@ -246,8 +325,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Accompagnement personnalisé</li>
 </ul>
 </section>
-<section id="dispositifs" class="level3" data-number="1.3.3">
-<h3 data-number="1.3.3" data-anchor-id="dispositifs"><span class="header-section-number">1.3.3</span> Dispositifs</h3>
+<section id="dispositifs" class="level3">
+<h3 data-anchor-id="dispositifs">Dispositifs</h3>
 <ul>
 <li>Intégration au système universitaire</li>
 <li>Formation régionalisée</li>
@@ -257,13 +336,13 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="éducation-primaire-et-secondaire" class="level2" data-number="1.4">
-<h2 data-number="1.4" data-anchor-id="éducation-primaire-et-secondaire"><span class="header-section-number">1.4</span> Éducation Primaire et Secondaire</h2>
-<section id="réforme-fondamentale" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" data-anchor-id="réforme-fondamentale"><span class="header-section-number">1.4.1</span> Réforme Fondamentale</h3>
+<section id="éducation-primaire-et-secondaire" class="level2">
+<h2 data-anchor-id="éducation-primaire-et-secondaire">Éducation Primaire et Secondaire</h2>
+<section id="réforme-fondamentale" class="level3">
+<h3 data-anchor-id="réforme-fondamentale">Réforme Fondamentale</h3>
 <blockquote class="blockquote">
 <p>“En amont, une politique éducative refondée sur l’acquisition des « fondamentaux » et un accroissement massif de la recherche permettront de renforcer des structures scientifiques en perdition.”<br>
-<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=6">Comment fabriquer une guillotine 🐝, p.6</a>{:target=“_blank”}</p>
+<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=6">Comment fabriquer une guillotine 🐝, p.6</a></p>
 </blockquote>
 <ul>
 <li>Refondation sur l’acquisition des fondamentaux</li>
@@ -273,11 +352,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Revalorisation des savoirs fondamentaux</li>
 </ul>
 </section>
-<section id="mesures-concrètes" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" data-anchor-id="mesures-concrètes"><span class="header-section-number">1.4.2</span> Mesures Concrètes</h3>
+<section id="mesures-concrètes" class="level3">
+<h3 data-anchor-id="mesures-concrètes">Mesures Concrètes</h3>
 <blockquote class="blockquote">
 <p>Augmentation des salaires des professeurs du secondaire, création de manuels uniques édités par un pôle public, suppression de la distinction Capes/agrégation, renationalisation et reterminalisation du baccalauréat.<br>
-<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27">Comment fabriquer une guillotine 🐝, p.27</a>{:target=“_blank”}</p>
+<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27">Comment fabriquer une guillotine 🐝, p.27</a></p>
 </blockquote>
 <ul>
 <li>Revalorisation salariale des enseignants</li>
@@ -287,11 +366,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Reterminalisation des examens</li>
 </ul>
 </section>
-<section id="innovation-pédagogique" class="level3" data-number="1.4.3">
-<h3 data-number="1.4.3" data-anchor-id="innovation-pédagogique"><span class="header-section-number">1.4.3</span> Innovation Pédagogique</h3>
+<section id="innovation-pédagogique" class="level3">
+<h3 data-anchor-id="innovation-pédagogique">Innovation Pédagogique</h3>
 <blockquote class="blockquote">
 <p>“Généralisation du principe de l’enseignement plurilingue à partir du CP. Création d’un examen d’entrée national en sixième.”<br>
-<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=35">Comment fabriquer une guillotine 🐝, p.35</a>{:target=“_blank”}</p>
+<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=35">Comment fabriquer une guillotine 🐝, p.35</a></p>
 </blockquote>
 <ul>
 <li>Enseignement plurilingue obligatoire dès le CP</li>
@@ -301,11 +380,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Renouvellement des méthodes pédagogiques</li>
 </ul>
 </section>
-<section id="réforme-structurelle" class="level3" data-number="1.4.4">
-<h3 data-number="1.4.4" data-anchor-id="réforme-structurelle"><span class="header-section-number">1.4.4</span> Réforme Structurelle</h3>
+<section id="réforme-structurelle" class="level3">
+<h3 data-anchor-id="réforme-structurelle">Réforme Structurelle</h3>
 <blockquote class="blockquote">
 <p>Refonte de la politique éducative à destination des plus fragiles par le truchement d’une dualisation des systèmes éducatifs doublée de la création de passerelles systématiques.<br>
-<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27">Comment fabriquer une guillotine 🐝, p.27</a>{:target=“_blank”}</p>
+<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27">Comment fabriquer une guillotine 🐝, p.27</a></p>
 </blockquote>
 <ul>
 <li>Dualisation du système éducatif</li>
@@ -315,11 +394,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Suppression des privilèges</li>
 </ul>
 </section>
-<section id="nouveaux-corps-enseignants" class="level3" data-number="1.4.5">
-<h3 data-number="1.4.5" data-anchor-id="nouveaux-corps-enseignants"><span class="header-section-number">1.4.5</span> Nouveaux Corps Enseignants</h3>
+<section id="nouveaux-corps-enseignants" class="level3">
+<h3 data-anchor-id="nouveaux-corps-enseignants">Nouveaux Corps Enseignants</h3>
 <blockquote class="blockquote">
 <p>“Elles feront à nouveau des fonctionnaires médicaux et éducationnels les piliers et la fierté de notre pays, aux côtés des corps d’ingénierie et de recherche, qui seront entièrement refondés.”<br>
-<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8">Comment fabriquer une guillotine 🐝, p.8</a>{:target=“_blank”}</p>
+<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8">Comment fabriquer une guillotine 🐝, p.8</a></p>
 </blockquote>
 <ul>
 <li>Refondation complète des corps enseignants</li>
@@ -329,8 +408,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Fierté nationale restaurée</li>
 </ul>
 </section>
-<section id="direction-et-administration" class="level3" data-number="1.4.6">
-<h3 data-number="1.4.6" data-anchor-id="direction-et-administration"><span class="header-section-number">1.4.6</span> Direction et Administration</h3>
+<section id="direction-et-administration" class="level3">
+<h3 data-anchor-id="direction-et-administration">Direction et Administration</h3>
 <ul>
 <li>Refonte du système administratif éducatif</li>
 <li>Simplification des procédures</li>
@@ -340,13 +419,13 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="langue-française" class="level2" data-number="1.5">
-<h2 data-number="1.5" data-anchor-id="langue-française"><span class="header-section-number">1.5</span> Langue Française</h2>
-<section id="promotion-et-excellence" class="level3" data-number="1.5.1">
-<h3 data-number="1.5.1" data-anchor-id="promotion-et-excellence"><span class="header-section-number">1.5.1</span> Promotion et Excellence</h3>
+<section id="langue-française" class="level2">
+<h2 data-anchor-id="langue-française">Langue Française</h2>
+<section id="promotion-et-excellence" class="level3">
+<h3 data-anchor-id="promotion-et-excellence">Promotion et Excellence</h3>
 <blockquote class="blockquote">
 <p>“Nous serons brillants car tel est l’esprit de ce pays, scientifique et cartésien, capable de produire de la pensée lorsque nous n’avions pas encore été colonisés.”<br>
-<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=6">Comment fabriquer une guillotine 🐝, p.6</a>{:target=“_blank”}</p>
+<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=6">Comment fabriquer une guillotine 🐝, p.6</a></p>
 </blockquote>
 <ul>
 <li>Rétablissement de l’esprit scientifique et cartésien</li>
@@ -356,11 +435,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Rayonnement international du français</li>
 </ul>
 </section>
-<section id="réforme-du-lycée" class="level3" data-number="1.5.2">
-<h3 data-number="1.5.2" data-anchor-id="réforme-du-lycée"><span class="header-section-number">1.5.2</span> Réforme du Lycée</h3>
+<section id="réforme-du-lycée" class="level3">
+<h3 data-anchor-id="réforme-du-lycée">Réforme du Lycée</h3>
 <blockquote class="blockquote">
 <p>Le lycée redeviendra un lieu de formation à l’accès sélectif, garant d’une forme d’éducation spécifique, égalisée avec les autres voies d’accès au savoir, à la création et à la pensée.<br>
-<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27">Comment fabriquer une guillotine 🐝, p.27</a>{:target=“_blank”}</p>
+<a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=27">Comment fabriquer une guillotine 🐝, p.27</a></p>
 </blockquote>
 <ul>
 <li>Sélectivité assumée</li>
@@ -370,8 +449,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Création et pensée valorisées</li>
 </ul>
 </section>
-<section id="démocratisation-du-savoir" class="level3" data-number="1.5.3">
-<h3 data-number="1.5.3" data-anchor-id="démocratisation-du-savoir"><span class="header-section-number">1.5.3</span> Démocratisation du Savoir</h3>
+<section id="démocratisation-du-savoir" class="level3">
+<h3 data-anchor-id="démocratisation-du-savoir">Démocratisation du Savoir</h3>
 <ul>
 <li>Suppression des statuts dérogatoires</li>
 <li>Fin des privilèges historiques</li>
@@ -380,10 +459,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="mesures-spécifiques" class="level2" data-number="1.6">
-<h2 data-number="1.6" data-anchor-id="mesures-spécifiques"><span class="header-section-number">1.6</span> Mesures Spécifiques</h2>
-<section id="statut-des-établissements" class="level3" data-number="1.6.1">
-<h3 data-number="1.6.1" data-anchor-id="statut-des-établissements"><span class="header-section-number">1.6.1</span> Statut des Établissements</h3>
+<section id="mesures-spécifiques" class="level2">
+<h2 data-anchor-id="mesures-spécifiques">Mesures Spécifiques</h2>
+<section id="statut-des-établissements" class="level3">
+<h3 data-anchor-id="statut-des-établissements">Statut des Établissements</h3>
 <ul>
 <li>Suppression du statut Sainte-Geneviève</li>
 <li>Égalisation des moyens</li>
@@ -391,8 +470,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Mixité sociale renforcée</li>
 </ul>
 </section>
-<section id="ressources-et-matériel" class="level3" data-number="1.6.2">
-<h3 data-number="1.6.2" data-anchor-id="ressources-et-matériel"><span class="header-section-number">1.6.2</span> Ressources et Matériel</h3>
+<section id="ressources-et-matériel" class="level3">
+<h3 data-anchor-id="ressources-et-matériel">Ressources et Matériel</h3>
 <ul>
 <li>Manuels uniques nationaux</li>
 <li>Ressources pédagogiques publiques</li>
@@ -403,10 +482,14 @@ ul.task-list li input[type="checkbox"] {
 
 </section>
 </section>
-</section>
 
 </main> <!-- /main -->
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2024 Aurores | <a href="https://aurores.org">aurores.org</a></p>
+  </div>
+</footer>
 
 
 

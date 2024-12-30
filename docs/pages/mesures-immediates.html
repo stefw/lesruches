@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Mesures Immédiates – Les Ruches 🐝</title>
+<title>Mesures Immédiates – Les Ruches</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -62,6 +62,83 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Recherche"
   }
 }</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const quotes = document.querySelectorAll('blockquote');
+    
+    quotes.forEach((quote, index) => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'quote-wrapper';
+        quote.parentNode.insertBefore(wrapper, quote);
+        wrapper.appendChild(quote);
+        
+        const shareButtons = document.createElement('div');
+        shareButtons.className = 'share-buttons';
+        shareButtons.style.display = 'none';
+        
+        const quoteText = quote.textContent.trim();
+        const pdfLink = 'https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf';
+        
+        const buttons = [
+            ['twitter', 'bi-twitter-x', `https://twitter.com/intent/tweet?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['bluesky', 'bi-cloud', `https://bsky.app/intent/compose?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['linkedin', 'bi-linkedin', `https://www.linkedin.com/sharing/share-offsite/?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['facebook', 'bi-facebook', `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pdfLink)}`],
+        ];
+        
+        buttons.forEach(([platform, icon, url]) => {
+            const link = document.createElement('a');
+            link.href = url;
+            link.className = `share-button ${platform}`;
+            link.target = '_blank';
+            link.rel = 'noopener';
+            
+            const iconElement = document.createElement('i');
+            iconElement.className = `bi ${icon}`;
+            link.appendChild(iconElement);
+            
+            shareButtons.appendChild(link);
+        });
+        
+        // Ajout du bouton Mastodon avec dialogue
+        const mastodonButton = document.createElement('a');
+        mastodonButton.href = '#';
+        mastodonButton.className = 'share-button mastodon';
+        mastodonButton.onclick = (e) => {
+            e.preventDefault();
+            const instance = prompt('Entrez votre instance Mastodon (ex: mastodon.social):', 'mastodon.social');
+            if (instance) {
+                const mastodonUrl = `https://${instance}/share?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`;
+                window.open(mastodonUrl, '_blank');
+            }
+        };
+        
+        const mastodonIcon = document.createElement('i');
+        mastodonIcon.className = 'bi bi-mastodon';
+        mastodonButton.appendChild(mastodonIcon);
+        shareButtons.appendChild(mastodonButton);
+        
+        wrapper.appendChild(shareButtons);
+        
+        wrapper.addEventListener('mouseenter', () => {
+            shareButtons.style.display = 'flex';
+        });
+        
+        wrapper.addEventListener('mouseleave', (e) => {
+            if (!e.relatedTarget || !e.relatedTarget.closest('.share-buttons')) {
+                shareButtons.style.display = 'none';
+            }
+        });
+        
+        shareButtons.addEventListener('mouseleave', () => {
+            if (!wrapper.matches(':hover')) {
+                shareButtons.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -75,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Les Ruches 🐝</span>
+    <span class="navbar-title">Les Ruches</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Recherche"></div>
@@ -89,12 +166,16 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../#"> 
+<span class="menu-text">|</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../pages/construire.html"> 
 <span class="menu-text">Construire</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../pages/mesures-immediates.html" aria-current="page"> 
-<span class="menu-text">Tout de suite</span></a>
+    <a class="nav-link" href="../#"> 
+<span class="menu-text">|</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../pages/economie.html"> 
@@ -105,16 +186,16 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Écologie</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pages/social.html"> 
-<span class="menu-text">Social</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../pages/education.html"> 
 <span class="menu-text">Éducation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../pages/institutions.html"> 
 <span class="menu-text">Institutions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../pages/social.html"> 
+<span class="menu-text">Social</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -131,26 +212,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sommaire</h2>
    
   <ul>
-  <li><a href="#mesures-immédiates" id="toc-mesures-immédiates" class="nav-link active" data-scroll-target="#mesures-immédiates"><span class="header-section-number">1</span> Mesures Immédiates</a>
+  <li><a href="#exécutif-et-administration" id="toc-exécutif-et-administration" class="nav-link active" data-scroll-target="#exécutif-et-administration">Exécutif et Administration</a>
   <ul class="collapse">
-  <li><a href="#exécutif-et-administration" id="toc-exécutif-et-administration" class="nav-link" data-scroll-target="#exécutif-et-administration"><span class="header-section-number">1.1</span> Exécutif et Administration</a>
-  <ul class="collapse">
-  <li><a href="#transformation-de-lexécutif" id="toc-transformation-de-lexécutif" class="nav-link" data-scroll-target="#transformation-de-lexécutif"><span class="header-section-number">1.1.1</span> Transformation de l’Exécutif</a></li>
-  <li><a href="#défenseur-du-peuple" id="toc-défenseur-du-peuple" class="nav-link" data-scroll-target="#défenseur-du-peuple"><span class="header-section-number">1.1.2</span> Défenseur du Peuple</a></li>
-  <li><a href="#commissaires-de-la-république" id="toc-commissaires-de-la-république" class="nav-link" data-scroll-target="#commissaires-de-la-république"><span class="header-section-number">1.1.3</span> Commissaires de la République</a></li>
+  <li><a href="#transformation-de-lexécutif" id="toc-transformation-de-lexécutif" class="nav-link" data-scroll-target="#transformation-de-lexécutif">Transformation de l’Exécutif</a></li>
+  <li><a href="#défenseur-du-peuple" id="toc-défenseur-du-peuple" class="nav-link" data-scroll-target="#défenseur-du-peuple">Défenseur du Peuple</a></li>
+  <li><a href="#commissaires-de-la-république" id="toc-commissaires-de-la-république" class="nav-link" data-scroll-target="#commissaires-de-la-république">Commissaires de la République</a></li>
   </ul></li>
-  <li><a href="#haute-fonction-publique" id="toc-haute-fonction-publique" class="nav-link" data-scroll-target="#haute-fonction-publique"><span class="header-section-number">1.2</span> Haute Fonction Publique</a>
+  <li><a href="#haute-fonction-publique" id="toc-haute-fonction-publique" class="nav-link" data-scroll-target="#haute-fonction-publique">Haute Fonction Publique</a>
   <ul class="collapse">
-  <li><a href="#renouvellement-des-corps" id="toc-renouvellement-des-corps" class="nav-link" data-scroll-target="#renouvellement-des-corps"><span class="header-section-number">1.2.1</span> Renouvellement des Corps</a></li>
-  <li><a href="#ouverture-aux-docteurs" id="toc-ouverture-aux-docteurs" class="nav-link" data-scroll-target="#ouverture-aux-docteurs"><span class="header-section-number">1.2.2</span> Ouverture aux Docteurs</a></li>
-  <li><a href="#période-de-carence" id="toc-période-de-carence" class="nav-link" data-scroll-target="#période-de-carence"><span class="header-section-number">1.2.3</span> Période de Carence</a></li>
-  <li><a href="#refondation-des-inspections" id="toc-refondation-des-inspections" class="nav-link" data-scroll-target="#refondation-des-inspections"><span class="header-section-number">1.2.4</span> Refondation des Inspections</a></li>
-  <li><a href="#transparence-administrative" id="toc-transparence-administrative" class="nav-link" data-scroll-target="#transparence-administrative"><span class="header-section-number">1.2.5</span> Transparence Administrative</a></li>
+  <li><a href="#renouvellement-des-corps" id="toc-renouvellement-des-corps" class="nav-link" data-scroll-target="#renouvellement-des-corps">Renouvellement des Corps</a></li>
+  <li><a href="#ouverture-aux-docteurs" id="toc-ouverture-aux-docteurs" class="nav-link" data-scroll-target="#ouverture-aux-docteurs">Ouverture aux Docteurs</a></li>
+  <li><a href="#période-de-carence" id="toc-période-de-carence" class="nav-link" data-scroll-target="#période-de-carence">Période de Carence</a></li>
+  <li><a href="#refondation-des-inspections" id="toc-refondation-des-inspections" class="nav-link" data-scroll-target="#refondation-des-inspections">Refondation des Inspections</a></li>
+  <li><a href="#transparence-administrative" id="toc-transparence-administrative" class="nav-link" data-scroll-target="#transparence-administrative">Transparence Administrative</a></li>
   </ul></li>
-  <li><a href="#justice" id="toc-justice" class="nav-link" data-scroll-target="#justice"><span class="header-section-number">1.3</span> Justice</a>
+  <li><a href="#justice" id="toc-justice" class="nav-link" data-scroll-target="#justice">Justice</a>
   <ul class="collapse">
-  <li><a href="#réforme-judiciaire" id="toc-réforme-judiciaire" class="nav-link" data-scroll-target="#réforme-judiciaire"><span class="header-section-number">1.3.1</span> Réforme Judiciaire</a></li>
-  </ul></li>
+  <li><a href="#réforme-judiciaire" id="toc-réforme-judiciaire" class="nav-link" data-scroll-target="#réforme-judiciaire">Réforme Judiciaire</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -181,12 +259,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="mesures-immédiates" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Mesures Immédiates</h1>
-<section id="exécutif-et-administration" class="level2" data-number="1.1">
-<h2 data-number="1.1" data-anchor-id="exécutif-et-administration"><span class="header-section-number">1.1</span> Exécutif et Administration</h2>
-<section id="transformation-de-lexécutif" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" data-anchor-id="transformation-de-lexécutif"><span class="header-section-number">1.1.1</span> Transformation de l’Exécutif</h3>
+<section id="exécutif-et-administration" class="level2">
+<h2 data-anchor-id="exécutif-et-administration">Exécutif et Administration</h2>
+<section id="transformation-de-lexécutif" class="level3">
+<h3 data-anchor-id="transformation-de-lexécutif">Transformation de l’Exécutif</h3>
 <blockquote class="blockquote">
 <p>“Le pouvoir saisi, un référendum sur les institutions sera tenu. Dans la perspective d’une scission des fonctions exécutives en autant de pôles de décision, mettant ainsi fin à la fonction d’incarnation totale et archaïque tenue par le chef de l’État, nous proposerons une modification temporaire de la durée du mandat présidentiel, une fusion des chambres, la suppression du Conseil économique, social et écologique, et la transformation du Sénat en une chambre du peuple.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=23">Comment fabriquer une guillotine 🐝 , p.23</a></p>
@@ -200,8 +276,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Transformation du Sénat</li>
 </ul>
 </section>
-<section id="défenseur-du-peuple" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" data-anchor-id="défenseur-du-peuple"><span class="header-section-number">1.1.2</span> Défenseur du Peuple</h3>
+<section id="défenseur-du-peuple" class="level3">
+<h3 data-anchor-id="défenseur-du-peuple">Défenseur du Peuple</h3>
 <blockquote class="blockquote">
 <p>“L’exécutif verra à Paris sa toute-puissance équilibrée par l’élection du défenseur du peuple, du gouverneur de la Banque de France et du procureur de la Nation, révocables et dès lors autorisés à revendiquer une légitimité populaire.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=24">Comment fabriquer une guillotine 🐝 , p.24</a></p>
@@ -214,8 +290,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Légitimité populaire directe</li>
 </ul>
 </section>
-<section id="commissaires-de-la-république" class="level3" data-number="1.1.3">
-<h3 data-number="1.1.3" data-anchor-id="commissaires-de-la-république"><span class="header-section-number">1.1.3</span> Commissaires de la République</h3>
+<section id="commissaires-de-la-république" class="level3">
+<h3 data-anchor-id="commissaires-de-la-république">Commissaires de la République</h3>
 <blockquote class="blockquote">
 <p>“Cette réforme s’accompagnera de la création de commissaires de la République élus qui prendront la place des préfets, l’imposition de mandats impératifs et révocatoires, la possibilité permanente de référendums d’initiative citoyenne à choix multiples.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=24">Comment fabriquer une guillotine 🐝 , p.24</a></p>
@@ -228,10 +304,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="haute-fonction-publique" class="level2" data-number="1.2">
-<h2 data-number="1.2" data-anchor-id="haute-fonction-publique"><span class="header-section-number">1.2</span> Haute Fonction Publique</h2>
-<section id="renouvellement-des-corps" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" data-anchor-id="renouvellement-des-corps"><span class="header-section-number">1.2.1</span> Renouvellement des Corps</h3>
+<section id="haute-fonction-publique" class="level2">
+<h2 data-anchor-id="haute-fonction-publique">Haute Fonction Publique</h2>
+<section id="renouvellement-des-corps" class="level3">
+<h3 data-anchor-id="renouvellement-des-corps">Renouvellement des Corps</h3>
 <blockquote class="blockquote">
 <p>“Le corps fonctionnarial administratif sera profondément renouvelé, ainsi que les modalités d’accès à son exercice, et tandis que la place centrale des corps médicaux, d’enseignement, de recherche et d’ingénierie sera réaffirmée, celle propre à l’organisation de la cité sera entièrement repensée.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=23">Comment fabriquer une guillotine 🐝 , p.23</a></p>
@@ -243,8 +319,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Refonte de l’organisation administrative</li>
 </ul>
 </section>
-<section id="ouverture-aux-docteurs" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" data-anchor-id="ouverture-aux-docteurs"><span class="header-section-number">1.2.2</span> Ouverture aux Docteurs</h3>
+<section id="ouverture-aux-docteurs" class="level3">
+<h3 data-anchor-id="ouverture-aux-docteurs">Ouverture aux Docteurs</h3>
 <blockquote class="blockquote">
 <p>“Ouverture de la fonction publique aux docteurs : systématisation du principe de recrutement d’un docteur (qualifié) pour un haut fonctionnaire recruté via une autre voie.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=23">Comment fabriquer une guillotine 🐝 , p.23</a></p>
@@ -255,8 +331,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Valorisation des qualifications doctorales</li>
 </ul>
 </section>
-<section id="période-de-carence" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" data-anchor-id="période-de-carence"><span class="header-section-number">1.2.3</span> Période de Carence</h3>
+<section id="période-de-carence" class="level3">
+<h3 data-anchor-id="période-de-carence">Période de Carence</h3>
 <blockquote class="blockquote">
 <p>“Une période de carence de cinq ans sera instaurée pour l’accès à la haute fonction publique après un passage dans le privé.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=23">Comment fabriquer une guillotine 🐝 , p.23</a></p>
@@ -266,8 +342,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Régulation des allers-retours public-privé</li>
 </ul>
 </section>
-<section id="refondation-des-inspections" class="level3" data-number="1.2.4">
-<h3 data-number="1.2.4" data-anchor-id="refondation-des-inspections"><span class="header-section-number">1.2.4</span> Refondation des Inspections</h3>
+<section id="refondation-des-inspections" class="level3">
+<h3 data-anchor-id="refondation-des-inspections">Refondation des Inspections</h3>
 <blockquote class="blockquote">
 <p>“Refondation des inspections générales, intégrées sous la tutelle du défenseur du peuple et séparées des grands corps d’État.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=24">Comment fabriquer une guillotine 🐝 , p.24</a></p>
@@ -278,8 +354,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Séparation des grands corps d’État</li>
 </ul>
 </section>
-<section id="transparence-administrative" class="level3" data-number="1.2.5">
-<h3 data-number="1.2.5" data-anchor-id="transparence-administrative"><span class="header-section-number">1.2.5</span> Transparence Administrative</h3>
+<section id="transparence-administrative" class="level3">
+<h3 data-anchor-id="transparence-administrative">Transparence Administrative</h3>
 <blockquote class="blockquote">
 <p>“Numérisation des Archives nationales et systématisation de l’accessibilité aux documents publics.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=24">Comment fabriquer une guillotine 🐝 , p.24</a></p>
@@ -291,10 +367,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="justice" class="level2" data-number="1.3">
-<h2 data-number="1.3" data-anchor-id="justice"><span class="header-section-number">1.3</span> Justice</h2>
-<section id="réforme-judiciaire" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" data-anchor-id="réforme-judiciaire"><span class="header-section-number">1.3.1</span> Réforme Judiciaire</h3>
+<section id="justice" class="level2">
+<h2 data-anchor-id="justice">Justice</h2>
+<section id="réforme-judiciaire" class="level3">
+<h3 data-anchor-id="réforme-judiciaire">Réforme Judiciaire</h3>
 <blockquote class="blockquote">
 <p>“Service public de la Défense intégré à la Sécurité sociale, identité judiciaire unique centralisant les contentieux.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=26">Comment fabriquer une guillotine 🐝 , p.26</a></p>
@@ -309,10 +385,14 @@ ul.task-list li input[type="checkbox"] {
 
 </section>
 </section>
-</section>
 
 </main> <!-- /main -->
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2024 Aurores | <a href="https://aurores.org">aurores.org</a></p>
+  </div>
+</footer>
 
 
 

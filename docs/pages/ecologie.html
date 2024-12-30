@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Écologie – Les Ruches 🐝</title>
+<title>Écologie – Les Ruches</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -62,6 +62,83 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Recherche"
   }
 }</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const quotes = document.querySelectorAll('blockquote');
+    
+    quotes.forEach((quote, index) => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'quote-wrapper';
+        quote.parentNode.insertBefore(wrapper, quote);
+        wrapper.appendChild(quote);
+        
+        const shareButtons = document.createElement('div');
+        shareButtons.className = 'share-buttons';
+        shareButtons.style.display = 'none';
+        
+        const quoteText = quote.textContent.trim();
+        const pdfLink = 'https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf';
+        
+        const buttons = [
+            ['twitter', 'bi-twitter-x', `https://twitter.com/intent/tweet?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['bluesky', 'bi-cloud', `https://bsky.app/intent/compose?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['linkedin', 'bi-linkedin', `https://www.linkedin.com/sharing/share-offsite/?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`],
+            ['facebook', 'bi-facebook', `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pdfLink)}`],
+        ];
+        
+        buttons.forEach(([platform, icon, url]) => {
+            const link = document.createElement('a');
+            link.href = url;
+            link.className = `share-button ${platform}`;
+            link.target = '_blank';
+            link.rel = 'noopener';
+            
+            const iconElement = document.createElement('i');
+            iconElement.className = `bi ${icon}`;
+            link.appendChild(iconElement);
+            
+            shareButtons.appendChild(link);
+        });
+        
+        // Ajout du bouton Mastodon avec dialogue
+        const mastodonButton = document.createElement('a');
+        mastodonButton.href = '#';
+        mastodonButton.className = 'share-button mastodon';
+        mastodonButton.onclick = (e) => {
+            e.preventDefault();
+            const instance = prompt('Entrez votre instance Mastodon (ex: mastodon.social):', 'mastodon.social');
+            if (instance) {
+                const mastodonUrl = `https://${instance}/share?text=${encodeURIComponent(quoteText)}&url=${encodeURIComponent(pdfLink)}`;
+                window.open(mastodonUrl, '_blank');
+            }
+        };
+        
+        const mastodonIcon = document.createElement('i');
+        mastodonIcon.className = 'bi bi-mastodon';
+        mastodonButton.appendChild(mastodonIcon);
+        shareButtons.appendChild(mastodonButton);
+        
+        wrapper.appendChild(shareButtons);
+        
+        wrapper.addEventListener('mouseenter', () => {
+            shareButtons.style.display = 'flex';
+        });
+        
+        wrapper.addEventListener('mouseleave', (e) => {
+            if (!e.relatedTarget || !e.relatedTarget.closest('.share-buttons')) {
+                shareButtons.style.display = 'none';
+            }
+        });
+        
+        shareButtons.addEventListener('mouseleave', () => {
+            if (!wrapper.matches(':hover')) {
+                shareButtons.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -75,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Les Ruches 🐝</span>
+    <span class="navbar-title">Les Ruches</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Recherche"></div>
@@ -89,12 +166,16 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../#"> 
+<span class="menu-text">|</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../pages/construire.html"> 
 <span class="menu-text">Construire</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pages/mesures-immediates.html"> 
-<span class="menu-text">Tout de suite</span></a>
+    <a class="nav-link" href="../#"> 
+<span class="menu-text">|</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../pages/economie.html"> 
@@ -105,16 +186,16 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Écologie</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../pages/social.html"> 
-<span class="menu-text">Social</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../pages/education.html"> 
 <span class="menu-text">Éducation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../pages/institutions.html"> 
 <span class="menu-text">Institutions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../pages/social.html"> 
+<span class="menu-text">Social</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -131,30 +212,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sommaire</h2>
    
   <ul>
-  <li><a href="#écologie" id="toc-écologie" class="nav-link active" data-scroll-target="#écologie"><span class="header-section-number">1</span> Écologie</a>
+  <li><a href="#mesures-immédiates" id="toc-mesures-immédiates" class="nav-link active" data-scroll-target="#mesures-immédiates">Mesures Immédiates</a>
   <ul class="collapse">
-  <li><a href="#mesures-immédiates" id="toc-mesures-immédiates" class="nav-link" data-scroll-target="#mesures-immédiates"><span class="header-section-number">1.1</span> Mesures Immédiates</a>
+  <li><a href="#marchés-publics-et-rénovation" id="toc-marchés-publics-et-rénovation" class="nav-link" data-scroll-target="#marchés-publics-et-rénovation">Marchés Publics et Rénovation</a></li>
+  <li><a href="#transport-et-énergie" id="toc-transport-et-énergie" class="nav-link" data-scroll-target="#transport-et-énergie">Transport et Énergie</a></li>
+  <li><a href="#publicité-et-traçabilité" id="toc-publicité-et-traçabilité" class="nav-link" data-scroll-target="#publicité-et-traçabilité">Publicité et Traçabilité</a></li>
+  </ul></li>
+  <li><a href="#agriculture-et-environnement" id="toc-agriculture-et-environnement" class="nav-link" data-scroll-target="#agriculture-et-environnement">Agriculture et Environnement</a>
   <ul class="collapse">
-  <li><a href="#marchés-publics-et-rénovation" id="toc-marchés-publics-et-rénovation" class="nav-link" data-scroll-target="#marchés-publics-et-rénovation"><span class="header-section-number">1.1.1</span> Marchés Publics et Rénovation</a></li>
-  <li><a href="#transport-et-énergie" id="toc-transport-et-énergie" class="nav-link" data-scroll-target="#transport-et-énergie"><span class="header-section-number">1.1.2</span> Transport et Énergie</a></li>
-  <li><a href="#publicité-et-traçabilité" id="toc-publicité-et-traçabilité" class="nav-link" data-scroll-target="#publicité-et-traçabilité"><span class="header-section-number">1.1.3</span> Publicité et Traçabilité</a></li>
+  <li><a href="#agriculture" id="toc-agriculture" class="nav-link" data-scroll-target="#agriculture">Agriculture</a></li>
+  <li><a href="#plan-forêt" id="toc-plan-forêt" class="nav-link" data-scroll-target="#plan-forêt">Plan Forêt</a></li>
   </ul></li>
-  <li><a href="#agriculture-et-environnement" id="toc-agriculture-et-environnement" class="nav-link" data-scroll-target="#agriculture-et-environnement"><span class="header-section-number">1.2</span> Agriculture et Environnement</a>
+  <li><a href="#pêche-et-ressources-marines" id="toc-pêche-et-ressources-marines" class="nav-link" data-scroll-target="#pêche-et-ressources-marines">Pêche et Ressources Marines</a>
   <ul class="collapse">
-  <li><a href="#agriculture" id="toc-agriculture" class="nav-link" data-scroll-target="#agriculture"><span class="header-section-number">1.2.1</span> Agriculture</a></li>
-  <li><a href="#plan-forêt" id="toc-plan-forêt" class="nav-link" data-scroll-target="#plan-forêt"><span class="header-section-number">1.2.2</span> Plan Forêt</a></li>
+  <li><a href="#réforme-de-la-pêche" id="toc-réforme-de-la-pêche" class="nav-link" data-scroll-target="#réforme-de-la-pêche">Réforme de la Pêche</a></li>
   </ul></li>
-  <li><a href="#pêche-et-ressources-marines" id="toc-pêche-et-ressources-marines" class="nav-link" data-scroll-target="#pêche-et-ressources-marines"><span class="header-section-number">1.3</span> Pêche et Ressources Marines</a>
+  <li><a href="#industrie-et-territoire" id="toc-industrie-et-territoire" class="nav-link" data-scroll-target="#industrie-et-territoire">Industrie et Territoire</a>
   <ul class="collapse">
-  <li><a href="#réforme-de-la-pêche" id="toc-réforme-de-la-pêche" class="nav-link" data-scroll-target="#réforme-de-la-pêche"><span class="header-section-number">1.3.1</span> Réforme de la Pêche</a></li>
+  <li><a href="#rééquilibrage-industriel" id="toc-rééquilibrage-industriel" class="nav-link" data-scroll-target="#rééquilibrage-industriel">Rééquilibrage Industriel</a></li>
+  <li><a href="#transformation-écologique" id="toc-transformation-écologique" class="nav-link" data-scroll-target="#transformation-écologique">Transformation Écologique</a></li>
   </ul></li>
-  <li><a href="#industrie-et-territoire" id="toc-industrie-et-territoire" class="nav-link" data-scroll-target="#industrie-et-territoire"><span class="header-section-number">1.4</span> Industrie et Territoire</a>
-  <ul class="collapse">
-  <li><a href="#rééquilibrage-industriel" id="toc-rééquilibrage-industriel" class="nav-link" data-scroll-target="#rééquilibrage-industriel"><span class="header-section-number">1.4.1</span> Rééquilibrage Industriel</a></li>
-  <li><a href="#transformation-écologique" id="toc-transformation-écologique" class="nav-link" data-scroll-target="#transformation-écologique"><span class="header-section-number">1.4.2</span> Transformation Écologique</a></li>
-  </ul></li>
-  <li><a href="#objectifs-de-transition" id="toc-objectifs-de-transition" class="nav-link" data-scroll-target="#objectifs-de-transition"><span class="header-section-number">1.5</span> Objectifs de Transition</a></li>
-  </ul></li>
+  <li><a href="#objectifs-de-transition" id="toc-objectifs-de-transition" class="nav-link" data-scroll-target="#objectifs-de-transition">Objectifs de Transition</a></li>
   </ul>
 </nav>
 </nav>
@@ -184,13 +262,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="écologie" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Écologie</h1>
-<p>Face à la mort de la diversité miraculeuse de notre planète et à l’uniformisation du vivant, la France doit se constituer en havre environnemental. La transformation écologique passera par la construction d’un appareil productif autonome et la remise en cause de l’expansion économique effrénée. Un plan d’arrêt de l’artificialisation des sols, d’écoconception des produits et de réduction massive des déplacements sera mis en œuvre. L’autonomie énergétique sera une priorité absolue, accompagnée d’une reconfiguration radicale de l’appareil productif pour sortir de la dépendance aux grands marchés mondiaux. Une loi de programmation souveraine sur l’énergie garantira la sécurité et l’accès universel aux ressources naturelles.</p>
-<section id="mesures-immédiates" class="level2" data-number="1.1">
-<h2 data-number="1.1" data-anchor-id="mesures-immédiates"><span class="header-section-number">1.1</span> Mesures Immédiates</h2>
-<section id="marchés-publics-et-rénovation" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" data-anchor-id="marchés-publics-et-rénovation"><span class="header-section-number">1.1.1</span> Marchés Publics et Rénovation</h3>
+<p>Face à la mort de la diversité miraculeuse de notre planète et à l’uniformisation du vivant, la France doit se constituer en havre environnemental.</p>
+<p>La transformation écologique passera par la construction d’un appareil productif autonome et la remise en cause de l’expansion économique effrénée.</p>
+<p>Un plan d’arrêt de l’artificialisation des sols, d’écoconception des produits et de réduction massive des déplacements sera mis en œuvre.</p>
+<p>L’autonomie énergétique sera une priorité absolue, accompagnée d’une reconfiguration radicale de l’appareil productif pour sortir de la dépendance aux grands marchés mondiaux.</p>
+<p>Une loi de programmation souveraine sur l’énergie garantira la sécurité et l’accès universel aux ressources naturelles.</p>
+<section id="mesures-immédiates" class="level2">
+<h2 data-anchor-id="mesures-immédiates">Mesures Immédiates</h2>
+<section id="marchés-publics-et-rénovation" class="level3">
+<h3 data-anchor-id="marchés-publics-et-rénovation">Marchés Publics et Rénovation</h3>
 <blockquote class="blockquote">
 <p>“Nous construirons un appareil productif guidé par l’appropriation, dans notre environnement immédiat, des principes scientifiques et industriels qui permettent aujourd’hui aux grandes puissances atlantiques et asiatiques de toucher la masse. Mais nous le ferons avec nos outils, et la conscience la plus intense que cette politique ne pourra s’appliquer en nos contrées sans remise en cause de la poursuite effrénée de l’expansion économique que nous connaissons.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7">Comment fabriquer une guillotine 🐝 , p.7</a></p>
@@ -208,8 +288,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Accompagnement social</li>
 </ul>
 </section>
-<section id="transport-et-énergie" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" data-anchor-id="transport-et-énergie"><span class="header-section-number">1.1.2</span> Transport et Énergie</h3>
+<section id="transport-et-énergie" class="level3">
+<h3 data-anchor-id="transport-et-énergie">Transport et Énergie</h3>
 <blockquote class="blockquote">
 <p>“Plan d’arrêt et de reconversion des sols artificialisés, d’écoconception des produits de consommation, de réduction massive des déplacements notamment via de lourds aménagements de la voirie et un renforcement de l’usage des transports fluviaux, y compris via la création de canaux.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=38">Comment fabriquer une guillotine 🐝 , p.38</a></p>
@@ -227,8 +307,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Débat démocratique</li>
 </ul>
 </section>
-<section id="publicité-et-traçabilité" class="level3" data-number="1.1.3">
-<h3 data-number="1.1.3" data-anchor-id="publicité-et-traçabilité"><span class="header-section-number">1.1.3</span> Publicité et Traçabilité</h3>
+<section id="publicité-et-traçabilité" class="level3">
+<h3 data-anchor-id="publicité-et-traçabilité">Publicité et Traçabilité</h3>
 <blockquote class="blockquote">
 <p>“La planète se meurt en ce qu’elle a de plus miraculeux : sa diversité charnelle et florale, animale et humaine est exploitée. Nous étouffons sous le règne de l’uniformité et la disparition du vivant dans sa diversité, et la France doit, en cette perspective, revendiquer son rapport à la différence, à l’altérité, et préparer sa survie en un monde où la radicalisation de notre biotope impose dès à présent que nous nous pensions en havre environnemental pour nos populations, sans nous transformer en citadelle assiégée.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7">Comment fabriquer une guillotine 🐝 , p.7</a></p>
@@ -247,10 +327,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="agriculture-et-environnement" class="level2" data-number="1.2">
-<h2 data-number="1.2" data-anchor-id="agriculture-et-environnement"><span class="header-section-number">1.2</span> Agriculture et Environnement</h2>
-<section id="agriculture" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" data-anchor-id="agriculture"><span class="header-section-number">1.2.1</span> Agriculture</h3>
+<section id="agriculture-et-environnement" class="level2">
+<h2 data-anchor-id="agriculture-et-environnement">Agriculture et Environnement</h2>
+<section id="agriculture" class="level3">
+<h3 data-anchor-id="agriculture">Agriculture</h3>
 <blockquote class="blockquote">
 <p>“Oui, la France redeviendra une exception, éloignée des ambitions des compétitions-monde qui nous écrasent et nous désingularisent, reléguant nos énergies à la création de biens de consommation, et nous transformant nous-mêmes en objets à dévorer.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7">Comment fabriquer une guillotine 🐝 , p.7</a></p>
@@ -268,8 +348,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Installation facilitée</li>
 </ul>
 </section>
-<section id="plan-forêt" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" data-anchor-id="plan-forêt"><span class="header-section-number">1.2.2</span> Plan Forêt</h3>
+<section id="plan-forêt" class="level3">
+<h3 data-anchor-id="plan-forêt">Plan Forêt</h3>
 <blockquote class="blockquote">
 <p>“Il nous faudra prioriser notre autonomie énergétique, avec laquelle nous ne transigerons pas, et réduire notre dépendance aux dispositifs d’accaparement des ressources qui nous feront en ces terres peuplées encore piller.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8">Comment fabriquer une guillotine 🐝 , p.8-9</a></p>
@@ -288,10 +368,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="pêche-et-ressources-marines" class="level2" data-number="1.3">
-<h2 data-number="1.3" data-anchor-id="pêche-et-ressources-marines"><span class="header-section-number">1.3</span> Pêche et Ressources Marines</h2>
-<section id="réforme-de-la-pêche" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" data-anchor-id="réforme-de-la-pêche"><span class="header-section-number">1.3.1</span> Réforme de la Pêche</h3>
+<section id="pêche-et-ressources-marines" class="level2">
+<h2 data-anchor-id="pêche-et-ressources-marines">Pêche et Ressources Marines</h2>
+<section id="réforme-de-la-pêche" class="level3">
+<h3 data-anchor-id="réforme-de-la-pêche">Réforme de la Pêche</h3>
 <blockquote class="blockquote">
 <p>“La planète se meurt en ce qu’elle a de plus miraculeux : sa diversité charnelle et florale, animale et humaine est exploitée. Nous étouffons sous le règne de l’uniformité et la disparition du vivant dans sa diversité.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7">Comment fabriquer une guillotine 🐝 , p.7</a></p>
@@ -310,10 +390,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="industrie-et-territoire" class="level2" data-number="1.4">
-<h2 data-number="1.4" data-anchor-id="industrie-et-territoire"><span class="header-section-number">1.4</span> Industrie et Territoire</h2>
-<section id="rééquilibrage-industriel" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" data-anchor-id="rééquilibrage-industriel"><span class="header-section-number">1.4.1</span> Rééquilibrage Industriel</h3>
+<section id="industrie-et-territoire" class="level2">
+<h2 data-anchor-id="industrie-et-territoire">Industrie et Territoire</h2>
+<section id="rééquilibrage-industriel" class="level3">
+<h3 data-anchor-id="rééquilibrage-industriel">Rééquilibrage Industriel</h3>
 <blockquote class="blockquote">
 <p>“Nous construirons un appareil productif guidé par l’appropriation, dans notre environnement immédiat, des principes scientifiques et industriels qui permettent aujourd’hui aux grandes puissances atlantiques et asiatiques de toucher la masse. Mais nous le ferons avec nos outils, et la conscience la plus intense que cette politique ne pourra s’appliquer en nos contrées sans remise en cause de la poursuite effrénée de l’expansion économique que nous connaissons.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7">Comment fabriquer une guillotine 🐝 , p.7</a></p>
@@ -331,10 +411,10 @@ ul.task-list li input[type="checkbox"] {
 <li>Emplois durables</li>
 </ul>
 </section>
-<section id="transformation-écologique" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" data-anchor-id="transformation-écologique"><span class="header-section-number">1.4.2</span> Transformation Écologique</h3>
-<section id="souveraineté-environnementale" class="level4" data-number="1.4.2.1">
-<h4 data-number="1.4.2.1" data-anchor-id="souveraineté-environnementale"><span class="header-section-number">1.4.2.1</span> Souveraineté Environnementale</h4>
+<section id="transformation-écologique" class="level3">
+<h3 data-anchor-id="transformation-écologique">Transformation Écologique</h3>
+<section id="souveraineté-environnementale" class="level4">
+<h4 data-anchor-id="souveraineté-environnementale">Souveraineté Environnementale</h4>
 <blockquote class="blockquote">
 <p>“La planète se meurt en ce qu’elle a de plus miraculeux : sa diversité charnelle et florale, animale et humaine est exploitée. Nous étouffons sous le règne de l’uniformité et la disparition du vivant dans sa diversité, et la France doit, en cette perspective, revendiquer son rapport à la différence, à l’altérité, et préparer sa survie en un monde où la radicalisation de notre biotope impose dès à présent que nous nous pensions en havre environnemental pour nos populations, sans nous transformer en citadelle assiégée.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7">Comment fabriquer une guillotine 🐝 , p.7</a></p>
@@ -347,8 +427,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Rapport équilibré à l’altérité naturelle</li>
 </ul>
 </section>
-<section id="appareil-productif" class="level4" data-number="1.4.2.2">
-<h4 data-number="1.4.2.2" data-anchor-id="appareil-productif"><span class="header-section-number">1.4.2.2</span> Appareil Productif</h4>
+<section id="appareil-productif" class="level4">
+<h4 data-anchor-id="appareil-productif">Appareil Productif</h4>
 <blockquote class="blockquote">
 <p>“Nous construirons un appareil productif guidé par l’appropriation, dans notre environnement immédiat, des principes scientifiques et industriels qui permettent aujourd’hui aux grandes puissances atlantiques et asiatiques de toucher la masse. Mais nous le ferons avec nos outils, et la conscience la plus intense que cette politique ne pourra s’appliquer en nos contrées sans remise en cause de la poursuite effrénée de l’expansion économique que nous connaissons.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7">Comment fabriquer une guillotine 🐝 , p.7</a></p>
@@ -361,8 +441,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Conscience écologique dans la production</li>
 </ul>
 </section>
-<section id="transport-et-mobilité" class="level4" data-number="1.4.2.3">
-<h4 data-number="1.4.2.3" data-anchor-id="transport-et-mobilité"><span class="header-section-number">1.4.2.3</span> Transport et Mobilité</h4>
+<section id="transport-et-mobilité" class="level4">
+<h4 data-anchor-id="transport-et-mobilité">Transport et Mobilité</h4>
 <blockquote class="blockquote">
 <p>“Plan d’arrêt et de reconversion des sols artificialisés, d’écoconception des produits de consommation, de réduction massive des déplacements notamment via de lourds aménagements de la voirie et un renforcement de l’usage des transports fluviaux, y compris via la création de canaux.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=38">Comment fabriquer une guillotine 🐝 , p.38</a></p>
@@ -375,8 +455,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Création de nouveaux canaux fluviaux</li>
 </ul>
 </section>
-<section id="consommation-et-production" class="level4" data-number="1.4.2.4">
-<h4 data-number="1.4.2.4" data-anchor-id="consommation-et-production"><span class="header-section-number">1.4.2.4</span> Consommation et Production</h4>
+<section id="consommation-et-production" class="level4">
+<h4 data-anchor-id="consommation-et-production">Consommation et Production</h4>
 <blockquote class="blockquote">
 <p>“Oui, la France redeviendra une exception, éloignée des ambitions des compétitions-monde qui nous écrasent et nous désingularisent, reléguant nos énergies à la création de biens de consommation, et nous transformant nous-mêmes en objets à dévorer.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=7">Comment fabriquer une guillotine 🐝 , p.7</a></p>
@@ -389,8 +469,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Redéfinition du rapport aux biens</li>
 </ul>
 </section>
-<section id="énergie-et-ressources" class="level4" data-number="1.4.2.5">
-<h4 data-number="1.4.2.5" data-anchor-id="énergie-et-ressources"><span class="header-section-number">1.4.2.5</span> Énergie et Ressources</h4>
+<section id="énergie-et-ressources" class="level4">
+<h4 data-anchor-id="énergie-et-ressources">Énergie et Ressources</h4>
 <blockquote class="blockquote">
 <p>“Il nous faudra prioriser notre autonomie énergétique, avec laquelle nous ne transigerons pas, et réduire notre dépendance aux dispositifs d’accaparement des ressources qui nous feront en ces terres peuplées encore piller.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8">Comment fabriquer une guillotine 🐝 , p.8-9</a></p>
@@ -403,8 +483,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Arrêt du pillage des terres</li>
 </ul>
 </section>
-<section id="aménagement-du-territoire" class="level4" data-number="1.4.2.6">
-<h4 data-number="1.4.2.6" data-anchor-id="aménagement-du-territoire"><span class="header-section-number">1.4.2.6</span> Aménagement du Territoire</h4>
+<section id="aménagement-du-territoire" class="level4">
+<h4 data-anchor-id="aménagement-du-territoire">Aménagement du Territoire</h4>
 <blockquote class="blockquote">
 <p>“La reconstruction d’une indépendance économique passera par une brusque reconfiguration de notre appareil productif afin de ne plus dépendre de ces grands marchés que nous nous contentons aujourd’hui de piller – je pense à LVMH en Asie, Bolloré en Afrique, Vinci et tant d’autres structures moins visibles agissant dans le monde entier.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8">Comment fabriquer une guillotine 🐝 , p.8</a></p>
@@ -417,8 +497,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Autonomie productive locale</li>
 </ul>
 </section>
-<section id="programmation-écologique" class="level4" data-number="1.4.2.7">
-<h4 data-number="1.4.2.7" data-anchor-id="programmation-écologique"><span class="header-section-number">1.4.2.7</span> Programmation Écologique</h4>
+<section id="programmation-écologique" class="level4">
+<h4 data-anchor-id="programmation-écologique">Programmation Écologique</h4>
 <blockquote class="blockquote">
 <p>“Quatre lois de programmation souveraine seront adoptées sur les questions de santé, d’énergie, d’enseignement et de numérique, qui nous permettront d’offrir à nos concitoyens des réponses concrètes en termes de sécurité, intimité, accès aux ressources et liberté.”<br>
 <a href="https://aurores.org/wp-content/uploads/2024/12/PROGRAMME-.pdf#page=8">Comment fabriquer une guillotine 🐝 , p.8</a></p>
@@ -433,8 +513,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="objectifs-de-transition" class="level2" data-number="1.5">
-<h2 data-number="1.5" data-anchor-id="objectifs-de-transition"><span class="header-section-number">1.5</span> Objectifs de Transition</h2>
+<section id="objectifs-de-transition" class="level2">
+<h2 data-anchor-id="objectifs-de-transition">Objectifs de Transition</h2>
 <ul>
 <li>Pondération écologique dans les marchés</li>
 <li>Rénovation thermique nationale</li>
@@ -454,10 +534,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 </section>
-</section>
 
 </main> <!-- /main -->
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2024 Aurores | <a href="https://aurores.org">aurores.org</a></p>
+  </div>
+</footer>
 
 
 

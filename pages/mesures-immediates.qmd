@@ -2,7 +2,6 @@
 title: "Mesures Immédiates"
 ---
 
-# Mesures Immédiates
 
 ## Exécutif et Administration
 
