@@ -1,80 +1,39 @@
 # Les Ruches
 
-Les Ruches est un site web construit avec Quarto présentant la synthèse de "Comment fabriquer une guillotine" de Juan Branco. Windsurf AI a été utilisé pour synthétiser les mesures programmatiques. Il peut y avoir des erreurs. Si vous en trouvez une, n’hesitez pas à ouvrir un ticket sur GitHub ou à envoyer un message sur [https://keybase.io/lesruches](Keybase).
+Blog photo mono-colonne. Les posts sont publiés depuis Telegram.
 
-## Fonctionnalités
+## Stack
 
-- Site web statique généré avec Quarto
-- Navigation structurée par sections thématiques
-- Présentation claire des mesures et réformes
-- Style personnalisé avec SCSS/CSS
+- **Next.js** (App Router, statique)
+- **Bot Telegram** (`bot/`) — reçoit photo + légende, commit dans le repo via l'API GitHub
 
-## Prérequis
+## Setup du bot
 
-- Quarto
-- Python 3.8 ou supérieur (pour les scripts utilitaires)
-- Un navigateur web moderne
-
-## Installation
-
-1. Clonez le dépôt :
 ```bash
-git clone https://github.com/stefw/lesruches.git
-cd lesruches
+cd bot
+npm install
+cp .env.example .env
+# Remplir .env avec les tokens
+node index.js
 ```
 
-2. Installez Quarto si ce n'est pas déjà fait :
-Visitez [quarto.org](https://quarto.org) pour les instructions d'installation.
+### Variables d'environnement (`bot/.env`)
 
-## Utilisation
+| Variable | Description |
+|---|---|
+| `TELEGRAM_BOT_TOKEN` | Token du bot (via @BotFather) |
+| `GITHUB_TOKEN` | Personal Access Token GitHub (scope `repo`) |
+| `GITHUB_OWNER` | `stefw` |
+| `GITHUB_REPO` | `lesruches` |
+| `ALLOWED_CHAT_ID` | Ton chat ID Telegram (via @userinfobot) |
 
-### Développement local
+## Poster une photo
 
-1. Lancez le serveur de développement Quarto :
+Envoie une photo au bot Telegram avec une légende (optionnelle). Le bot commit automatiquement dans le repo et le site se met à jour.
+
+## Dev
+
 ```bash
-quarto preview
+npm run dev
 ```
 
-2. Ouvrez votre navigateur à l'adresse indiquée (généralement http://localhost:4200)
-
-### Structure du projet
-
-```
-branco/
-├── _quarto.yml       # Configuration Quarto
-├── index.qmd         # Page d'accueil
-├── custom.scss       # Styles personnalisés
-├── styles.css        # Styles additionnels
-├── pages/           # Pages de contenu
-│   ├── construire.qmd
-│   ├── institutions.qmd
-│   ├── economie.qmd
-│   └── ...
-└── docs/            # Site généré
-```
-
-### Modification du contenu
-
-- Les fichiers `.qmd` contiennent le contenu en format Quarto/Markdown
-- Le style peut être personnalisé via `custom.scss` et `styles.css`
-- La configuration du site se trouve dans `_quarto.yml`
-
-## Contribution
-
-Les contributions sont les bienvenues ! Pour contribuer :
-
-1. Forkez le projet
-2. Créez une branche pour votre contribution (`git checkout -b feature/NouvelleMesure`)
-3. Committez vos changements (`git commit -m 'Ajout d'une nouvelle mesure'`)
-4. Poussez vers la branche (`git push origin feature/NouvelleMesure`)
-5. Ouvrez une Pull Request
-
-## Licence
-
-Ce projet est sous [licence MIT](LICENSE) - voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
-## Contact
-
-Pour toute question ou suggestion :
-- Ouvrez une issue sur GitHub
-- Contactez les mainteneurs du projet via GitHub
